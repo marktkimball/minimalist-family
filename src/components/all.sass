@@ -1,7 +1,10 @@
 @import "~bulma/sass/utilities/initial-variables"
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;800&family=Work+Sans&display=swap')
 
 // Config vars
 // Kaldi logo brand color: #FD461E
+$brand-primary: #1D3754
+$brand-secondary: #CE6857
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 
@@ -10,8 +13,25 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 
+body
+  font-family: 'Work Sans', sans-serif!important
+
+nav.navbar
+  background-color: #1D3754
+  .navbar-item
+    color: #4a4a4a
+    opacity: 1
+    font-weight: bold
+    transition: opacity 200ms ease-in-out
+  .navbar-brand
+    .navbar-item
+      opacity: 1
+
 .navbar .navbar-menu
-  box-shadow:none !important
+  box-shadow: none !important
+.navbar
+  .container
+    padding: 16px 0
 
 .content .taglist
   list-style: none
@@ -43,34 +63,45 @@ $black: #2b2523
   align-items: center
 
 .full-width-image
-    width: 100vw
-    height: 400px
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
+  width: 100vw
+  height: 400px
+  background-size: cover
+  background-position: bottom
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+.jumbotron-info-text-container
+  margin-top: 64px
+  text-align: center
+  .info-text
+    color: #FFF
+    font-size: 1.8rem
 
 .btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
-    text-decoration: none
-    font-weight: 700
-    color: #CC3700
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
+  display: inline-block
+  padding: 12px 16px 10px
+  font-size: 18px
+  font-size: 1rem
+  line-height: 1.25
+  background-color: #fff
+  border-radius: .25rem
+  text-decoration: none
+  font-weight: 700
+  color: #CC3700
+  text-align: center
+  -webkit-box-shadow: inset 0 0 0 2px #CC3700
+  box-shadow: inset 0 0 0 2px #f40
+  -webkit-transition: all .15s ease
+  transition: all .15s ease
 
 .margin-top-0
   margin-top: 0 !important
 
+a.navbar-item
+  img
+    max-height: 80px
 .navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
@@ -81,8 +112,8 @@ $black: #2b2523
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
 footer.footer
-  padding: 3rem 0rem 0rem
-  background-color: transparent
+  padding: 3rem 0rem
+  background-color: $brand-primary
 
 //Menu overrides
 $menu-item-color: $white-ter
@@ -93,7 +124,6 @@ $menu-item-active-background-color:	$kaldi-red-invert
 $menu-list-border-left: 1px solid $kaldi-red-invert
 $menu-label-color: $white-ter
 
-
 .menu-label
   font-size: 1em !important
   text-align: left
@@ -103,38 +133,152 @@ $menu-label-color: $white-ter
 .social
   padding: 2em
 .social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
+  padding: .5em .5em .3em .5em
+  border-radius: 1em
+  background-color: $white-ter
+  margin: .5em
+  width: 1em
+  height: 1em
+  vertical-align: middle
+  display: inline
 
 // blog roll
 .blog-list-item.is-featured
-  background-color: #d6400033;
+  background-color: #d6400033
 .blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
+  display: flex
+  margin-bottom: 1em
 .blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
-
+  flex-basis: 35%
+  margin: 0 1.5em 0 0
 
 @import "~bulma"
 
+.home-jumbotron
+  width: 100%
+  height: 100vh
+
+.navbar-burger
+  color: #FFF
+
+.headline-text
+  font-family: 'Eczar', serif
+  font-weight: bold
+
+.sub-headline-text
+  font-family: 'Eczar', serif
+
+.body-text
+  font-family: 'Work Sans', sans-serif
+
+.main-pitch
+  font-size: 5rem
+  margin: 96px 0
+
+.footer-text
+  color: #FFF
+  font-size: 2.4rem
+
+.visit-us-link
+  color: #FFF
+  margin-left: 0.8rem
+  &:hover
+    color: #FFF
+    text-decoration: underline
 
 // responsiveness
++desktop
+  nav.navbar
+    .navbar-item
+      color: #FFF
+      opacity: 0.5
+      &:hover
+        opacity: 1
+        color: #fff
+
 +tablet-only
   .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
+    flex-basis: 50%
+
+  nav.navbar
+    .navbar-menu
+      background: $brand-primary
+      .navbar-item
+        color: #FFF
+        &:hover
+          color: #000
 
 +mobile
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+    text-align: center
+    max-width: 70%
+    margin: 0 0 1em
+
+  nav.navbar
+    .navbar-menu
+      .navbar-item
+        color: #4a4a4a
+        opacity: 1
+        &:hover
+          color: #000
+
+  .main-pitch
+    font-size: 2.4rem
+    margin: 36px 0
+
+  .footer-text
+    font-size: 24px
+    text-align: center
+
+  nav.navbar
+    .navbar-menu
+      background-color: initial
+      .navbar-item
+        color: #FFF
+        font-weight: bold
+
+/* Shadow 0dp */
+.depth-0
+  box-shadow: none
+
+/* Shadow 1dp */
+.depth-1
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2)
+
+/* Shadow 2dp */
+.depth-2
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+
+/* Shadow 3dp */
+.depth-3
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2)
+
+/* Shadow 4dp */
+.depth-4
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),0 2px 4px -1px rgba(0, 0, 0, 0.2)
+
+/* Shadow 6dp */
+.depth-5
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12),0 3px 5px -1px rgba(0, 0, 0, 0.2)
+
+/* Shadow 8dp */
+.depth-6
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2)
+
+/* Shadow 9dp */
+.depth-7
+  box-shadow: 0 9px 12px 1px rgba(0, 0, 0, 0.14),0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.2)
+
+/* Shadow 12dp */
+.depth-8
+  box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2)
+
+/* Shadow 16dp */
+.depth-9
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)
+
+/* Shadow 24dp */
+.depth-10
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2)

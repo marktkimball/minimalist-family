@@ -1,0 +1,36 @@
+.mini-hero {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(29, 55, 84, 0.5);
+  }
+}
+
+.mini-hero-text-container {
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.mini-hero-title {
+  font-size: 48px;
+}
+
+.mini-hero-subtitle {
+  border-top: 1px solid #fff;
+  font-size: 22px;
+  font-style: italic;
+  margin-top: 20px;
+  padding-top: 20px;
+}

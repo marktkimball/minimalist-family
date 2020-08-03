@@ -1,0 +1,13 @@
+.about-subsection {
+  padding: 0 10%;
+
+  h3 {
+    font-family: 'Eczar', serif;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-subsection {
+    padding: 0;
+  }
+}

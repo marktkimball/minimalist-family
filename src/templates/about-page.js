@@ -1,55 +1,67 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from 'react';
+import PropTypes from 'prop-types';
+import MiniHero from '../components/MiniHero';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Content, { HTMLContent } from '../components/Content';
+import PictureCTAContainer from '../components/PictureCTA';
+import CommunionImage from '../img/communion.jpg';
+import meetPastorImage from '../img/meet-pastor.jpg';
+import leadershipImage from '../img/leadership.jpg';
+import ourBeliefsImage from '../img/our-beliefs.jpg';
+import ourHistoryImage from '../img/our-history.jpg';
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-
+export const AboutPageTemplate = ({
+  title,
+  subtitle,
+  content,
+  contentComponent,
+}) => {
+  const PageContent = contentComponent || Content;
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+    <>
+      <MiniHero image={CommunionImage} title={title} subtitle={subtitle} />
+      <section className="section section--gradient">
+        <PageContent className="content" content={content} />
+        <PictureCTAContainer
+          items={[
+            { image: ourBeliefsImage, title: 'Our Beliefs', to: '/beliefs' },
+            { image: ourHistoryImage, title: 'Our History', to: '/history' },
+            { image: meetPastorImage, title: 'Meet Our Pastor', to: '/pastor' },
+            { image: leadershipImage, title: 'Leadership', to: '/leadership' },
+          ]}
+        />
+      </section>
+    </>
+  );
+};
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-}
+};
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        subtitle={post.frontmatter.subtitle}
         content={post.html}
       />
     </Layout>
-  )
-}
+  );
+};
 
 AboutPage.propTypes = {
   data: PropTypes.object.isRequired,
-}
+};
 
-export default AboutPage
+export default AboutPage;
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
@@ -57,7 +69,8 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        subtitle
       }
     }
   }
-`
+`;

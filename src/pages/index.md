@@ -1,6 +1,7 @@
 ---
 templateKey: index-page
 image: /img/jumbo-tron.jpg
+logo: /img/logo_orange.png
 title: Branch Hill Baptist Church
 heading: Great coffee with a conscience
 subheading: Growing in the Word, Proclaiming by Grace

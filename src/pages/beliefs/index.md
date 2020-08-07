@@ -2,7 +2,7 @@
 templateKey: 'beliefs-page'
 path: /beliefs
 title: Our Beliefs
-subtitle: Sola Scriptura
+subtitle: Your word is truth
 ---
 
 A Bible Baptist is one who believes in a supernatural Bible, which tells of a supernatural Christ, Who had a supernatural birth, Who spoke supernatural words, Who performed supernatural miracles, Who lived a supernatural life, Who died a supernatural death, Who rose in supernatural splendor, and Who will one day return in supernatural glory to establish a supernatural kingdom on earth.

@@ -1,13 +1,18 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from 'react';
+import { Link } from 'gatsby';
+import Layout from '../components/Layout';
+import './error-page.scss';
 
 const NotFoundPage = () => (
   <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
+    <section className="section section--gradient">
+      <h1 className="headline-text error-heading">Page Not Found</h1>
+      <p className="error-body">
+        We've looked, but we couldn't find that page.
+      </p>
+      <Link to="/">Return Home</Link>
+    </section>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

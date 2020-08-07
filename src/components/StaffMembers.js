@@ -31,7 +31,7 @@ StaffMembers.propTypes = {
     bio: PropTypes.string,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     name: PropTypes.string.isRequired,
-    position: PropTypes.string,
+    subtitle: PropTypes.string,
   }).isRequired,
 };
 

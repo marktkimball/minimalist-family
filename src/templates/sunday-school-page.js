@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import SundaySchoolImage from '../img/bible-on-desk.jpg';
 
-export const SundaySchoolTemplate = ({
+export const SundaySchoolPageTemplate = ({
   title,
   subtitle,
   lead,
@@ -25,19 +25,19 @@ export const SundaySchoolTemplate = ({
   );
 };
 
-SundaySchoolTemplate.propTypes = {
+SundaySchoolPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   lead: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 };
 
-const SundaySchool = ({ data }) => {
+const SundaySchoolPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <SundaySchoolTemplate
+      <SundaySchoolPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         lead={post.frontmatter.lead}
@@ -48,13 +48,13 @@ const SundaySchool = ({ data }) => {
   );
 };
 
-SundaySchool.propTypes = {
+SundaySchoolPage.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default SundaySchool;
+export default SundaySchoolPage;
 
-export const SundaySchoolQuery = graphql`
+export const SundaySchoolPageQuery = graphql`
   query SundaySchool($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html

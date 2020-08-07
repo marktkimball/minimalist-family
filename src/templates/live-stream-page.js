@@ -8,7 +8,7 @@ import Spinner from '../components/Spinner';
 import LiveStreamImage from '../img/livestream.jpg';
 import './about.scss';
 
-export const LiveStreamTemplate = ({ title, subtitle, lead }) => {
+export const LiveStreamPageTemplate = ({ title, subtitle, lead }) => {
   return (
     <>
       <MiniHero image={LiveStreamImage} title={title} subtitle={subtitle} />
@@ -29,13 +29,13 @@ export const LiveStreamTemplate = ({ title, subtitle, lead }) => {
   );
 };
 
-LiveStreamTemplate.propTypes = {
+LiveStreamPageTemplate.propTypes = {
   title: PropTypes.string,
   lead: PropTypes.string,
   subtitle: PropTypes.string,
 };
 
-const LiveStream = ({ data }) => {
+const LiveStreamPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
@@ -43,7 +43,7 @@ const LiveStream = ({ data }) => {
       <Helmet>
         <script src={withPrefix('boxcast.js')} type="text/javascript" />
       </Helmet>
-      <LiveStreamTemplate
+      <LiveStreamPageTemplate
         title={post.frontmatter.title}
         lead={post.frontmatter.lead}
         subtitle={post.frontmatter.subtitle}
@@ -52,7 +52,7 @@ const LiveStream = ({ data }) => {
   );
 };
 
-LiveStream.propTypes = {
+LiveStreamPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -60,9 +60,9 @@ LiveStream.propTypes = {
   }),
 };
 
-export default LiveStream;
+export default LiveStreamPage;
 
-export const LiveStreamQuery = graphql`
+export const LiveStreamPageQuery = graphql`
   query LiveStream($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html

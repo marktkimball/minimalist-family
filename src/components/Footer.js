@@ -26,7 +26,7 @@ const Footer = class extends React.Component {
                   <Link to="/history">Our History</Link>
                 </li>
                 <li>
-                  <Link to="/pastor">Meet Our Pastor</Link>
+                  <Link to="/missions">Missions</Link>
                 </li>
                 <li>
                   <Link to="/leadership">Leadership</Link>

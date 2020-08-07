@@ -7,7 +7,7 @@ import SundaySchoolImage from '../img/sunday-school.jpg';
 
 import Layout from '../components/Layout';
 
-export const IndexPageTemplate = ({ image, logo }) => (
+export const IndexPageTemplate = ({ missionStatement, image, logo }) => (
   <div>
     <div
       className="full-width-image margin-top-0 home-jumbotron depth-4"
@@ -37,9 +37,7 @@ export const IndexPageTemplate = ({ image, logo }) => (
     </div>
     <section className="section section--gradient">
       <div className="container">
-        <h1 className="title headline-text main-pitch">
-          Growing in the Word, proclaiming by grace.
-        </h1>
+        <h1 className="title headline-text main-pitch">{missionStatement}</h1>
       </div>
       <PictureCTAContainer
         items={[
@@ -56,6 +54,7 @@ export const IndexPageTemplate = ({ image, logo }) => (
 );
 
 IndexPageTemplate.propTypes = {
+  missionStatement: PropTypes.string,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   logo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };
@@ -65,7 +64,11 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate image={frontmatter.image} logo={frontmatter.logo} />
+      <IndexPageTemplate
+        missionStatement={frontmatter.missionStatement}
+        image={frontmatter.image}
+        logo={frontmatter.logo}
+      />
     </Layout>
   );
 };
@@ -84,6 +87,7 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
+        missionStatement
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

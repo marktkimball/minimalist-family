@@ -10,6 +10,8 @@ const EventItemPreview = ({ entry, widgetFor }) => {
       description={entry.getIn(['data', 'description'])}
       tags={tags && tags.toJS()}
       title={entry.getIn(['data', 'title'])}
+      location={entry.getIn(['data', 'location'])}
+      address={entry.getIn(['data', 'address'])}
     />
   );
 };

@@ -2,9 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ImNewPageTemplate } from '../../templates/im-new-page';
 
-const ImNewPreview = ({ entry }) => {
+const ImNewPreview = ({ entry, widgetFor }) => {
   return (
-    <ImNewPageTemplate title={entry.getIn(['data', 'title', 'subtitle'])} />
+    <ImNewPageTemplate
+      content={widgetFor('body')}
+      subtitle={entry.getIn(['data', 'subtitle'])}
+      title={entry.getIn(['data', 'title'])}
+      intro={entry.getIn(['data', 'intro']).toJS()}
+    />
   );
 };
 
@@ -12,6 +17,7 @@ ImNewPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
+  widgetFor: PropTypes.func,
 };
 
 export default ImNewPreview;

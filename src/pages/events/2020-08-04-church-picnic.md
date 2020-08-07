@@ -2,7 +2,7 @@
 templateKey: event-item
 title: August Church Wide Picnic
 date: 2020-08-04T12:00:00.000Z
-featuredpost: false
+featuredEvent: false
 description: A great opportunity to meet more folks in the church family
 location: Loveland Township Park
 address: 126 Karl Brown Way, Loveland, OH 45140

@@ -1,0 +1,39 @@
+.sermon-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  padding: 16px 0;
+  color: #6b6b6b;
+}
+
+.sermon-title-container {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.sermon-content-container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.sermon-title {
+  font-size: 22px;
+  color: #333;
+}
+
+.sermon-speaker {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+  .sermon-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sermon-content-container {
+    width: 100%;
+  }
+}

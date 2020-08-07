@@ -37,34 +37,52 @@ const Footer = class extends React.Component {
               <h4>Contact</h4>
               <ul className="footer-link-list contact-list">
                 <li>
-                  <a href="tel:5136833663">phone: (513) 683-3663</a>
+                  <a className="phone-link" href="tel:5136833663">
+                    phone: (513) 683-3663
+                  </a>
                 </li>
                 <li>email: info@branchhill.org</li>
                 <li>fax: (513) 683-4685</li>
               </ul>
             </div>
-          </div>
-        </div>
-        <div className="content">
-          <div className="container">
-            <div className="column is-12">
-              <div className="footer-text sub-headline-text">
-                Visit:
-                <Link
-                  className="visit-us-link"
-                  to="https://goo.gl/maps/88B9rQsy9huwo7dy7"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  6526 Guinea Pike, Loveland, Ohio 45140
-                </Link>
-              </div>
+            <div className="footer-list-group">
+              <h4>Visit</h4>
+              <ul className="footer-link-list contact-list">
+                <li>Sunday: 11am & 6pm</li>
+                <li>Wednesday: 7pm</li>
+                <li>
+                  <Link
+                    className="visit-us-link"
+                    to="https://goo.gl/maps/88B9rQsy9huwo7dy7"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <div>6526 Guinea Pike</div>
+                    <div>Loveland, Ohio 45140</div>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
         <div className="content">
           <div className="container copyright">
-            Copyright © 2020 Branch Hill Baptist Church. All rights reserved.
+            Copyright © {new Date().getFullYear()} Branch Hill Baptist Church.
+            All rights reserved.
+            <p>
+              Created by{' '}
+              <a
+                className="copyright-link"
+                href="https://marktkimball.github.io/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                MK Engineering
+              </a>
+            </p>
+            <Link className="copyright-link" to="/credits">
+              Credits
+            </Link>
           </div>
         </div>
       </footer>

@@ -1,0 +1,40 @@
+// Fix Me
+
+article.event-list-item.tile {
+  p {
+    a.event-button {
+      background: transparent;
+      border: 2px solid #1d3754;
+      color: #1d3754;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      min-width: 150px;
+      padding: 8px 32px;
+      transition: background 300ms ease-in-out, color 300ms ease-in-out;
+      text-decoration: none;
+
+      &:hover {
+        background: #1d3754;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.event-meta-data-container {
+  > * {
+    margin: 8px 0;
+  }
+  .event-date-text {
+    font-size: 20px;
+  }
+
+  .event-location-text {
+    font-weight: bold;
+  }
+
+  .event-description-text {
+    font-style: italic;
+  }
+}

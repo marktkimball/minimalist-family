@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import PictureCTAContainer from '../components/PictureCTA';
-import welcomeImage from '../img/welcome.jpg';
-import sundaySchoolImage from '../img/sunday-school.jpg';
+import WelcomeImage from '../img/welcome.jpg';
+import SundaySchoolImage from '../img/sunday-school.jpg';
 
 import Layout from '../components/Layout';
 
@@ -26,6 +26,7 @@ export const IndexPageTemplate = ({ image, logo }) => (
         }}
       >
         <img
+          alt="logo"
           src={!!logo.childImageSharp ? logo.childImageSharp.fluid.src : logo}
         />
       </div>
@@ -42,9 +43,9 @@ export const IndexPageTemplate = ({ image, logo }) => (
       </div>
       <PictureCTAContainer
         items={[
-          { image: welcomeImage, title: "I'm New", to: '/im-new' },
+          { image: WelcomeImage, title: "I'm New", to: '/im-new' },
           {
-            image: sundaySchoolImage,
+            image: SundaySchoolImage,
             title: 'Sunday School',
             to: '/sunday-school',
           },

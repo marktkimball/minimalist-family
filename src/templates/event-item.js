@@ -1,12 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { kebabCase } from 'lodash';
+import { Helmet } from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import Layout from '../components/Layout';
+import Content, { HTMLContent } from '../components/Content';
 
-export const BlogPostTemplate = ({
+export const EventItemTemplate = ({
+  address,
+  date,
   content,
   contentComponent,
   description,
@@ -14,7 +16,7 @@ export const BlogPostTemplate = ({
   title,
   helmet,
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
   return (
     <section className="section">
@@ -22,10 +24,22 @@ export const BlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
+            <h1 className="headline-text title is-size-2">{title}</h1>
+            <div className="event-meta-data-container">
+              <div className="alt-headline-text event-date-text">{date}</div>
+              <div className="event-location-text">
+                Location:{' '}
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${address}`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {address}
+                </a>
+              </div>
+              <p className="event-description-text">{description}</p>
+            </div>
+            <hr />
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -43,28 +57,32 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-BlogPostTemplate.propTypes = {
+EventItemTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
+  address: PropTypes.string,
+  date: PropTypes.string,
   helmet: PropTypes.object,
-}
+};
 
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+const EventItem = ({ data }) => {
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <BlogPostTemplate
+      <EventItemTemplate
         content={post.html}
         contentComponent={HTMLContent}
+        date={post.frontmatter.date}
+        address={post.frontmatter.address}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Event">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -76,19 +94,19 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
-BlogPost.propTypes = {
+EventItem.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-}
+};
 
-export default BlogPost
+export default EventItem;
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query EventItemByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -97,7 +115,8 @@ export const pageQuery = graphql`
         title
         description
         tags
+        address
       }
     }
   }
-`
+`;

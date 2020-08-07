@@ -33,7 +33,7 @@ const Navbar = () => (
       </ul>
       <ul>
         <li className="nav-item-cta-container">
-          <Link className="nav-item-cta" to="/live">
+          <Link className="nav-item-cta" to="/live-stream">
             Live
           </Link>
         </li>

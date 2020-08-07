@@ -5,11 +5,11 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import PictureCTAContainer from '../components/PictureCTA';
-import CommunionImage from '../img/communion.jpg';
-import meetPastorImage from '../img/meet-pastor.jpg';
-import leadershipImage from '../img/leadership.jpg';
-import ourBeliefsImage from '../img/our-beliefs.jpg';
-import ourHistoryImage from '../img/our-history.jpg';
+import AboutUsImage from '../img/aboutUs.jpg';
+import MissionsImage from '../img/missions.jpg';
+import LeadershipImage from '../img/leadership.jpg';
+import OurBeliefsImage from '../img/our-beliefs.jpg';
+import OurHistoryImage from '../img/our-history.jpg';
 
 export const AboutPageTemplate = ({
   title,
@@ -20,15 +20,15 @@ export const AboutPageTemplate = ({
   const PageContent = contentComponent || Content;
   return (
     <>
-      <MiniHero image={CommunionImage} title={title} subtitle={subtitle} />
+      <MiniHero image={AboutUsImage} title={title} subtitle={subtitle} />
       <section className="section section--gradient">
         <PageContent className="content" content={content} />
         <PictureCTAContainer
           items={[
-            { image: ourBeliefsImage, title: 'Our Beliefs', to: '/beliefs' },
-            { image: ourHistoryImage, title: 'Our History', to: '/history' },
-            { image: meetPastorImage, title: 'Meet Our Pastor', to: '/pastor' },
-            { image: leadershipImage, title: 'Leadership', to: '/leadership' },
+            { image: OurBeliefsImage, title: 'Our Beliefs', to: '/beliefs' },
+            { image: OurHistoryImage, title: 'Our History', to: '/history' },
+            { image: MissionsImage, title: 'Missions', to: '/missions' },
+            { image: LeadershipImage, title: 'Leadership', to: '/leadership' },
           ]}
         />
       </section>

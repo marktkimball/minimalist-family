@@ -3,27 +3,32 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
-import StaffMembers from '../components/StaffMembers';
 import MiniHero from '../components/MiniHero';
-import leadershipImage from '../img/leadership.jpg';
+import StaffMembers from '../components/StaffMembers';
+import MissionsImage from '../img/missions.jpg';
 import './about.scss';
 
-export const LeadershipPageTemplate = ({
-  staff,
+export const MissionsPageTemplate = ({
   title,
   subtitle,
+  precontent,
   lead,
+  missionaries,
   content,
   contentComponent,
 }) => {
   const PageContent = contentComponent || Content;
   return (
     <>
-      <MiniHero image={leadershipImage} title={title} subtitle={subtitle} />
+      <MiniHero image={MissionsImage} title={title} subtitle={subtitle} />
       <p className="about-page-lead">{lead}</p>
       <section className="section section--gradient">
+        <PageContent
+          className="content about-subsection"
+          content={precontent}
+        />
         <div className="content">
-          <StaffMembers staff={staff} />
+          <StaffMembers staff={missionaries} />
         </div>
         <PageContent className="content about-subsection" content={content} />
       </section>
@@ -31,24 +36,26 @@ export const LeadershipPageTemplate = ({
   );
 };
 
-LeadershipPageTemplate.propTypes = {
-  staff: PropTypes.array,
+MissionsPageTemplate.propTypes = {
   title: PropTypes.string,
+  precontent: PropTypes.string,
   subtitle: PropTypes.string,
   lead: PropTypes.string,
+  missionaries: PropTypes.array,
   content: PropTypes.node,
 };
 
-const LeadershipPage = ({ data }) => {
+const MissionsPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <LeadershipPageTemplate
+      <MissionsPageTemplate
         title={post.frontmatter.title}
+        precontent={post.frontmatter.precontent}
         lead={post.frontmatter.lead}
         subtitle={post.frontmatter.subtitle}
-        staff={post.frontmatter.staff}
+        missionaries={post.frontmatter.missionaries}
         contentComponent={HTMLContent}
         content={post.html}
       />
@@ -56,7 +63,7 @@ const LeadershipPage = ({ data }) => {
   );
 };
 
-LeadershipPage.propTypes = {
+MissionsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -64,20 +71,20 @@ LeadershipPage.propTypes = {
   }),
 };
 
-export default LeadershipPage;
+export default MissionsPage;
 
-export const LeadershipPageQuery = graphql`
-  query LeadershipPage($id: String!) {
+export const MissionsPageQuery = graphql`
+  query MissionsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
         subtitle
+        precontent
         lead
-        staff {
+        missionaries {
           name
           subtitle
-          bio
           image {
             childImageSharp {
               fluid(maxWidth: 240, quality: 64) {

@@ -1,3 +1,8 @@
+footer.footer {
+  padding: 3rem 0rem;
+  background-color: #1d3754;
+}
+
 .footer-list-container {
   display: flex;
   justify-content: space-evenly;
@@ -34,14 +39,20 @@
       }
     }
 
-    &.contact-list {
-      > *,
-      > * > a {
-        color: #fff;
+    .phone-link {
+      color: #fff;
 
-        &:hover {
-          text-decoration: none;
-        }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .visit-us-link {
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -51,6 +62,14 @@
   color: #fafafa;
   font-size: 12px;
   text-align: center;
+
+  .copyright-link {
+    color: #fafafa;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {

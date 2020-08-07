@@ -1,5 +1,5 @@
 ---
-templateKey: 'im-new-page'
+templateKey: im-new-page
 path: /im-new
 title: Plan Your Visit
 subtitle: What to expect
@@ -9,6 +9,10 @@ intro:
       lead: When do you meet?
       text: >
         There are lots of ways for you to join in on one of our services. With multiple service times throughout the week, we want you to have as much of an opportunity as possible to be a part. On Sundays, we have our morning worship service at 11am. Prior to the service, there is a Bible study hour beginning at 10am. The Sunday evening service begins at 6pm. We also have a midweek Bible study on Wednesdays at 7pm.
+    - image: /img/map.png
+      lead: Where do I go?
+      text: >
+        Our address is: 6526 Guinea Pike, Loveland, Ohio 45140. We have a main entrance at the front of the building that takes you straight into the main auditorium. There are greeters available to answer any questions you might have. Feel free to say good morning, take a bulletin, and have a seat. If you are coming for a Sunday School class, ask a greeter where the class is taking place and they will help you along. If you don't know what class to go to, no worries, come into the main auditorium and have a seat for our Pastor’s Bible study. You will be filled with the Word!
     - image: /img/bible_open.png
       lead: Should I bring my Bible?
       text: >

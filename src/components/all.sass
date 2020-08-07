@@ -2,14 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;800&family=Work+Sans&display=swap')
 
 // Config vars
-// Kaldi logo brand color: #FD461E
 $brand-primary: #1D3754
 $brand-secondary: #CE6857
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+$brand-primary-text: #1D3754
+$brand-primary-text-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+$primary: $brand-primary-text
+$primary-invert: $brand-primary-text-invert
 $body-color: #333
 $black: #2b2523
 
@@ -111,17 +110,14 @@ a.navbar-item
   fill: currentColor
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
-footer.footer
-  padding: 3rem 0rem
-  background-color: $brand-primary
 
 //Menu overrides
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-item-active-color: $primary-invert
+$menu-item-active-background-color:	$primary-invert
+$menu-list-border-left: 1px solid $primary-invert
 $menu-label-color: $white-ter
 
 .menu-label
@@ -143,12 +139,12 @@ $menu-label-color: $white-ter
   display: inline
 
 // blog roll
-.blog-list-item.is-featured
-  background-color: #d6400033
-.blog-list-item header
+.event-list-item.is-featured
+  background-color: #329adc3d
+.event-list-item header
   display: flex
   margin-bottom: 1em
-.blog-list-item .featured-thumbnail
+.event-list-item .featured-thumbnail
   flex-basis: 35%
   margin: 0 1.5em 0 0
 
@@ -168,6 +164,10 @@ $menu-label-color: $white-ter
 .sub-headline-text
   font-family: 'Eczar', serif
 
+.alt-headline-text
+  font-family: 'Work Sans', sans-serif
+  font-weight: bold
+
 .body-text
   font-family: 'Work Sans', sans-serif
 
@@ -175,15 +175,10 @@ $menu-label-color: $white-ter
   font-size: 5rem
   margin: 96px 0
 
-.footer-text
-  color: #FFF
-  font-size: 2.4rem
-
-.visit-us-link
-  color: #FFF
-  margin-left: 0.8rem
+a
+  color: #2f5989
   &:hover
-    color: #FFF
+    color: $brand-primary-text
     text-decoration: underline
 
 // responsiveness
@@ -197,7 +192,7 @@ $menu-label-color: $white-ter
         color: #fff
 
 +tablet-only
-  .blog-list-item .featured-thumbnail
+  .event-list-item .featured-thumbnail
     flex-basis: 50%
 
   nav.navbar
@@ -209,9 +204,9 @@ $menu-label-color: $white-ter
           color: #000
 
 +mobile
-  .blog-list-item header
+  .event-list-item header
     display: block
-  .blog-list-item .featured-thumbnail
+  .event-list-item .featured-thumbnail
     text-align: center
     max-width: 70%
     margin: 0 0 1em
@@ -227,10 +222,6 @@ $menu-label-color: $white-ter
   .main-pitch
     font-size: 2.4rem
     margin: 36px 0
-
-  .footer-text
-    font-size: 24px
-    text-align: center
 
   nav.navbar
     .navbar-menu

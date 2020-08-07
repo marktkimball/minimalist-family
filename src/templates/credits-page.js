@@ -2,51 +2,51 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Content, { HTMLContent } from '../components/Content';
-import Features from '../components/Features';
 import Layout from '../components/Layout';
-import MiniHero from '../components/MiniHero';
-import ImNewImage from '../img/imNew.jpg';
 
-export const ImNewPageTemplate = ({
+export const CreditsPageTemplate = ({
   title,
-  subtitle,
+  credits,
   content,
   contentComponent,
-  intro,
 }) => {
   const PageContent = contentComponent || Content;
   return (
     <>
-      <MiniHero image={ImNewImage} title={title} subtitle={subtitle} />
       <section className="section section--gradient">
+        <h1 className="headline-text credits-headline">{title}</h1>
         <PageContent className="content" content={content} />
-        <Features gridItems={intro.blurbs} />
+        <ul className="credits-list">
+          {credits.map((credit, i) => (
+            <li key={i}>{credit}</li>
+          ))}
+        </ul>
       </section>
     </>
   );
 };
 
-ImNewPageTemplate.propTypes = {
+CreditsPageTemplate.propTypes = {
   title: PropTypes.string,
+  credits: PropTypes.arrayOf(PropTypes.string),
 };
 
-const ImNewPage = ({ data }) => {
+const CreditsPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <ImNewPageTemplate
+      <CreditsPageTemplate
         title={post.frontmatter.title}
-        subtitle={post.frontmatter.subtitle}
+        credits={post.frontmatter.credits}
         contentComponent={HTMLContent}
         content={post.html}
-        intro={post.frontmatter.intro}
       />
     </Layout>
   );
 };
 
-ImNewPage.propTypes = {
+CreditsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -54,28 +54,15 @@ ImNewPage.propTypes = {
   }),
 };
 
-export default ImNewPage;
+export default CreditsPage;
 
-export const ImNewPageQuery = graphql`
-  query ImNewPage($id: String!) {
+export const CreditsPageQuery = graphql`
+  query CreditsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
-        subtitle
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-            lead
-          }
-        }
+        credits
       }
     }
   }

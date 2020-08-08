@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logo.png';
+import FacebookIcon from '../img/social/facebook.svg';
+import YoutubeIcon from '../img/social/youtube.svg';
 import './footer.scss';
 
 const Footer = class extends React.Component {
@@ -83,6 +85,34 @@ const Footer = class extends React.Component {
             <Link className="copyright-link" to="/credits">
               Credits
             </Link>
+          </div>
+          <div className="social">
+            <a
+              title="facebook"
+              href="https://www.facebook.com/branchhillbaptist/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                className="social-icon"
+                src={FacebookIcon}
+                alt="Facebook"
+                style={{ width: '1.5em', height: '1.5em' }}
+              />
+            </a>
+            <a
+              title="youtube"
+              href="https://www.youtube.com/channel/UCAxOzmmPhv2SAyaA1z69zJg/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                className="social-icon"
+                src={YoutubeIcon}
+                alt="YouTube"
+                style={{ width: '1.5em', height: '1.5em' }}
+              />
+            </a>
           </div>
         </div>
       </footer>

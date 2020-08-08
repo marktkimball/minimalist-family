@@ -72,6 +72,22 @@ footer.footer {
   }
 }
 
+.social {
+  padding: 1rem 5rem 0 5rem;
+  display: flex;
+  justify-content: flex-end;
+
+  .social-icon {
+    filter: invert(0.5);
+    margin-right: 32px;
+    transition: filter 300ms ease-in-out;
+
+    &:hover {
+      filter: invert(1);
+    }
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .footer-list-container {
     flex-direction: column;

@@ -10,7 +10,7 @@ import Layout from '../components/Layout';
 export const IndexPageTemplate = ({ missionStatement, image, logo }) => (
   <div>
     <div
-      className="full-width-image margin-top-0 home-jumbotron depth-4"
+      className="home-jumbotron depth-4"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image

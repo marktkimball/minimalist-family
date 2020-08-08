@@ -8,9 +8,6 @@ export const MiniHero = ({ className = '', image, title, subtitle }) => (
       backgroundImage: `url(${
         !!image.childImageSharp ? image.childImageSharp.fluid.src : image
       })`,
-      backgroundPosition: '50%',
-      backgroundSize: 'cover',
-      backgroundAttachment: 'fixed',
     }}
     className={`mini-hero ${className}`}
   >

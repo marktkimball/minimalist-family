@@ -15,9 +15,6 @@ export const IndexPageTemplate = ({ missionStatement, image, logo }) => (
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: '50%',
-        backgroundSize: 'cover',
-        backgroundAttachment: 'fixed',
       }}
     >
       <div

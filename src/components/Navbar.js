@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import logo from '../img/Monogram_orange.png';
+import Logo from '../img/monogram.svg';
 import './navbar.scss';
 
 const Navbar = () => (
@@ -10,7 +10,7 @@ const Navbar = () => (
     <span></span>
     <span></span>
     <Link to="/" className="menu-logo" title="Branch Hill Baptist Church">
-      <img src={logo} alt="Branch Hill Baptist Church" />
+      <img alt="Branch Hill Baptist Church Logo" src={Logo} />
     </Link>
 
     <div className="menu">

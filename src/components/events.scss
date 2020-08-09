@@ -1,7 +1,23 @@
 // Fix Me
+.is-in-past {
+  opacity: 0.5;
+}
+
+.event-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.expired-event-tag {
+  border: 2px solid #ffc107;
+  padding: 4px 8px;
+  background: #ffc107;
+  color: #fff;
+}
 
 article.event-list-item.tile {
-  p {
+  div {
     a.event-button {
       background: transparent;
       border: 2px solid #1d3754;
@@ -36,5 +52,22 @@ article.event-list-item.tile {
 
   .event-description-text {
     font-style: italic;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .event-buttons-container {
+    flex-direction: column;
+    align-items: center;
+
+    .event-button {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .expired-event-tag {
+    margin: 16px 0 0 auto;
+    padding: 2px 4px;
   }
 }

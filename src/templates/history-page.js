@@ -5,7 +5,6 @@ import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import MiniHero from '../components/MiniHero';
 import OurHistoryImage from '../img/our-history.jpg';
-import './about.scss';
 
 export const HistoryPageTemplate = ({
   title,

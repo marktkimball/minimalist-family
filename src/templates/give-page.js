@@ -5,7 +5,6 @@ import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import MiniHero from '../components/MiniHero';
 import GiveImage from '../img/give.jpg';
-import './about.scss';
 
 export const GivePageTemplate = ({
   title,

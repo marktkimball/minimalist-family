@@ -28,7 +28,6 @@ collections:
       - { label: 'Event Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Featured Event', name: 'featuredEvent', widget: 'boolean' }
-      - { label: 'Featured Image', name: 'featuredimage', widget: image }
       - { label: 'Location', name: 'location', widget: 'string' }
       - { label: 'Address', name: 'address', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
@@ -84,20 +83,12 @@ collections:
           - {
               label: Intro,
               name: intro,
-              widget: object,
+              widget: list,
               fields:
                 [
-                  {
-                    label: Blurbs,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text },
-                        { label: Lead, name: lead, widget: string },
-                      ],
-                  },
+                  { label: Image, name: image, widget: image },
+                  { label: Lead, name: lead, widget: string },
+                  { label: Text, name: text, widget: text },
                 ],
             }
       - file: 'src/pages/beliefs/index.md'

@@ -53,15 +53,15 @@ const Footer = class extends React.Component {
                 <li>Sunday: 11am & 6pm</li>
                 <li>Wednesday: 7pm</li>
                 <li>
-                  <Link
+                  <a
                     className="visit-us-link"
-                    to="https://goo.gl/maps/88B9rQsy9huwo7dy7"
+                    href="https://goo.gl/maps/88B9rQsy9huwo7dy7"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <div>6526 Guinea Pike</div>
                     <div>Loveland, Ohio 45140</div>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

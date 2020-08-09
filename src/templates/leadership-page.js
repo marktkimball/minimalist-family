@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import StaffMembers from '../components/StaffMembers';
 import MiniHero from '../components/MiniHero';
 import leadershipImage from '../img/leadership.jpg';
-import './about.scss';
 
 export const LeadershipPageTemplate = ({
   staff,

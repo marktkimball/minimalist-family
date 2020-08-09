@@ -5,11 +5,13 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import PictureCTAContainer from '../components/PictureCTA';
-import AboutUsImage from '../img/aboutUs.jpg';
+import AboutUsImage from '../img/about-us.jpg';
 import MissionsImage from '../img/missions.jpg';
 import LeadershipImage from '../img/leadership.jpg';
 import OurBeliefsImage from '../img/our-beliefs.jpg';
 import OurHistoryImage from '../img/our-history.jpg';
+
+import './pages.scss';
 
 export const AboutPageTemplate = ({
   title,

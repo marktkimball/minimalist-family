@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import MiniHero from '../components/MiniHero';
 import Spinner from '../components/Spinner';
 import LiveStreamImage from '../img/livestream.jpg';
-import './about.scss';
 
 export const LiveStreamPageTemplate = ({ title, subtitle, lead }) => {
   return (

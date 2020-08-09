@@ -9,17 +9,17 @@ staff:
     subtitle: Senior Pastor
     image: /img/PastorSonya.jpg
     bio: >
-      Pastor Greer was called to preach 30 years ago and has been the pastor of Branch Hill Baptist Church for the past 25 years. A student of the scriptures he places a great importance on studying the word of God. His ministry has been one of teaching and equiping the saints. He and his wife, Sonya, have four children and have resided in Loveland for the past 25 years.
+      Pastor Greer was called to preach 35 years ago and has been the pastor of Branch Hill Baptist Church for the past 33 years. A student of the scriptures he places a great importance on studying the word of God. His ministry has been one of teaching and equiping the saints. He and his wife, Sonya, have four children and have resided in Loveland for the past 30 years.
   - name: Arnold Dykes
     subtitle: Deacon
     image: /img/ArnoldCarolynDykes.jpg
     bio: >
-      Brother Arnold Dykes has been a member of Branch Hill for the past 27 years. Arnold has served faithfully as deacon for most of those years. He and his wife, Caroline, serve our seniors and in our Sunday School. They also have a ministry to local nursing homes. Arnold and Caroline are the parents of three children.
+      Brother Arnold Dykes has been a member of Branch Hill for the past 32 years. Arnold has served faithfully as deacon for most of those years. He and his wife, Caroline, serve our seniors and in our Sunday School. They also have a ministry to local nursing homes. Arnold and Caroline are the parents of three children.
   - name: Jim Blankenship
     subtitle: Missions Manager
     image: /img/JimBlankenship.png
     bio: >
-      Brother Jim Blankenship has served for most of his 25 plus years at Branch Hill in the area of his passion. Brother Jim's love for missions is clear in his labor and dedication he has given to this service. Brother Jim and his wife, Brenda, have lived in the area all their life and have a son and daughter-in-law who live in North Carolina.
+      Brother Jim Blankenship has served for most of his 30 plus years at Branch Hill in the area of his passion. Brother Jim's love for missions is clear in his labor and dedication he has given to this service. Brother Jim and his wife, Brenda, have lived in the area all their life and have a son and daughter-in-law who live in North Carolina.
 ---
 
 ## From the Pastor

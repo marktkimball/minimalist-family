@@ -5,7 +5,6 @@ import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import MiniHero from '../components/MiniHero';
 import ourBeliefsImage from '../img/our-beliefs.jpg';
-import './about.scss';
 
 export const BeliefsPageTemplate = ({
   title,

@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
 import PictureCTAContainer from '../components/PictureCTA';
 import WelcomeImage from '../img/welcome.jpg';
 import SundaySchoolImage from '../img/sunday-school.jpg';
-
-import Layout from '../components/Layout';
 
 export const IndexPageTemplate = ({ missionStatement, image, logo }) => (
   <div>

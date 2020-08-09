@@ -8,7 +8,7 @@ const ImNewPreview = ({ entry, widgetFor }) => {
       content={widgetFor('body')}
       subtitle={entry.getIn(['data', 'subtitle'])}
       title={entry.getIn(['data', 'title'])}
-      intro={entry.getIn(['data', 'intro']).toJS()}
+      items={entry.getIn(['data', 'items']).toJS()}
     />
   );
 };

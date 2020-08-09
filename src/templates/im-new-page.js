@@ -5,14 +5,14 @@ import Content, { HTMLContent } from '../components/Content';
 import Features from '../components/Features';
 import Layout from '../components/Layout';
 import MiniHero from '../components/MiniHero';
-import ImNewImage from '../img/imNew.jpg';
+import ImNewImage from '../img/im-new.jpg';
 
 export const ImNewPageTemplate = ({
   title,
   subtitle,
   content,
   contentComponent,
-  intro,
+  items,
 }) => {
   const PageContent = contentComponent || Content;
   return (
@@ -20,7 +20,7 @@ export const ImNewPageTemplate = ({
       <MiniHero image={ImNewImage} title={title} subtitle={subtitle} />
       <section className="section section--gradient">
         <PageContent className="content" content={content} />
-        <Features gridItems={intro.blurbs} />
+        <Features gridItems={items} />
       </section>
     </>
   );
@@ -40,7 +40,7 @@ const ImNewPage = ({ data }) => {
         subtitle={post.frontmatter.subtitle}
         contentComponent={HTMLContent}
         content={post.html}
-        intro={post.frontmatter.intro}
+        items={post.frontmatter.items}
       />
     </Layout>
   );
@@ -63,18 +63,16 @@ export const ImNewPageQuery = graphql`
       frontmatter {
         title
         subtitle
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
+        items {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 240, quality: 64) {
+                ...GatsbyImageSharpFluid
               }
             }
-            text
-            lead
           }
+          lead
+          text
         }
       }
     }

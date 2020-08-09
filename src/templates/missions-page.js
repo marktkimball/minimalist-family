@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import MiniHero from '../components/MiniHero';
 import StaffMembers from '../components/StaffMembers';
 import MissionsImage from '../img/missions.jpg';
-import './about.scss';
 
 export const MissionsPageTemplate = ({
   title,
@@ -27,7 +26,7 @@ export const MissionsPageTemplate = ({
           className="content about-subsection"
           content={precontent}
         />
-        <div className="content">
+        <div className="content missionaries-container">
           <StaffMembers staff={missionaries} />
         </div>
         <PageContent className="content about-subsection" content={content} />

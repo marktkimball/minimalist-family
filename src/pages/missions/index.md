@@ -20,7 +20,7 @@ precontent: >
 missionaries:
   - name: John and Debbie MacLennan
     subtitle: Scotland
-    image: /img/maclennan.jpg
+    image: /img/john-debbie-mclennan.jpg
   - name: Thomas and Angie Castellaw
     subtitle: Hawaii
     image: /img/thomas-angie-castellaw-1-.jpg

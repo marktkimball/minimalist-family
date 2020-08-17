@@ -3,9 +3,16 @@ templateKey: missions-page
 path: /missions
 title: Missions
 subtitle: Reaching the unreached
-lead: Branch Hill Baptist Church has been a mission minded church for many years and seeks to be supportive to those forwarding the Gospel of Jesus Christ around the world.
+lead: Branch Hill Baptist Church has been a mission minded church for many years
+  and seeks to be supportive to those forwarding the Gospel of Jesus Christ
+  around the world.
 precontent: >
-  Currently the church supports over 40 missionaries and/or mission projects worldwide. From the mountains of Papua New Guinea to the streets of South Africa, the reach of our missions program has been blessed of the Lord. Not only do we support mission endeavors, but we encourage and have taken many missions trips ourselves to places such as Belize, Mexico, Germany, and Québec.
+  Currently the church supports over 40 missionaries and/or mission projects
+  worldwide. From the mountains of Papua New Guinea to the streets of South
+  Africa, the reach of our missions program has been blessed of the Lord. Not
+  only do we support mission endeavors, but we encourage and have taken many
+  missions trips ourselves to places such as Belize, Mexico, Germany, and
+  Québec.
 
   Jesus gave the scope of missions when he said, “Go into all the world and preach the gospel...” If you are looking for ideas on how to effectively pray for our missionaries and their needs, please take a look at the information below.
 
@@ -15,8 +22,8 @@ missionaries:
     subtitle: Scotland
     image: /img/maclennan.jpg
   - name: Thomas and Angie Castellaw
-    subtitle: Germany
-    image: /img/castellaw.jpg
+    subtitle: Hawaii
+    image: /img/thomas-angie-castellaw-1-.jpg
 ---
 
 ## How to pray for missionaries

@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import './all.scss';
 import useSiteMetadata from './SiteMetadata';
-import { withPrefix } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -49,6 +49,13 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
+      <Link
+        className="depth-2 special-announcements-banner"
+        to="/announcements"
+      >
+        COVID-19 Updates
+      </Link>
+
       <div>{children}</div>
       <Footer />
     </div>

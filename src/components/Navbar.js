@@ -4,7 +4,7 @@ import Logo from '../img/monogram.svg';
 import './navbar.scss';
 
 const Navbar = () => (
-  <nav className="menu-container">
+  <nav className="depth-3 menu-container">
     <input type="checkbox" aria-label="Toggle menu" />
     <span></span>
     <span></span>

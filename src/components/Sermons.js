@@ -12,7 +12,7 @@ export const Sermons = ({ sermons }) => (
         </div>
         <div className="sermon-content-container">
           {sermon.date}
-          <a href={sermon.url} rel="noopener noreferrer" target="_blank">
+          <a href={sermon.file} rel="noopener noreferrer" target="_blank">
             Download
           </a>
         </div>
@@ -26,7 +26,7 @@ Sermons.propTypes = {
     title: PropTypes.string.isRequired,
     speaker: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
+    file: PropTypes.any.isRequired,
   }),
 };
 

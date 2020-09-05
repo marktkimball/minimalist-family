@@ -10,7 +10,7 @@ export const StaffMembers = ({ staff }) => (
           className="staff-image-container"
           style={{
             backgroundImage: `url(${
-              !!person.image.childImageSharp
+              !!person?.image?.childImageSharp
                 ? person.image.childImageSharp.fluid.src
                 : person.image
             })`,

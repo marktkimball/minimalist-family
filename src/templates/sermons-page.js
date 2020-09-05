@@ -35,7 +35,7 @@ SermonsPageTemplate.propTypes = {
     title: PropTypes.string.isRequired,
     speaker: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
+    file: PropTypes.any.isRequired,
   }),
   content: PropTypes.string,
   contentComponent: PropTypes.func,

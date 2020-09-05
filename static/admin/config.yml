@@ -231,7 +231,12 @@ collections:
                   { label: Title, name: title, widget: string },
                   { label: Speaker, name: speaker, widget: string },
                   { label: File, name: file, widget: file },
-                  { label: Date, name: date, widget: datetime },
+                  {
+                    label: Date,
+                    name: date,
+                    widget: date,
+                    format: 'MM-DD-YYYY',
+                  },
                 ],
             }
           - { label: 'Body', name: 'body', widget: 'markdown' }

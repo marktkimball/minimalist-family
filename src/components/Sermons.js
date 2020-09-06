@@ -13,7 +13,7 @@ export const Sermons = ({ sermons }) => (
         <div className="sermon-content-container">
           {sermon.date}
           <a
-            href={sermon.file.split('static')[1]}
+            href={sermon.file.publicURL}
             rel="noopener noreferrer"
             target="_blank"
             download

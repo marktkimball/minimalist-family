@@ -76,7 +76,9 @@ export const SermonsPageQuery = graphql`
         sermons {
           title
           speaker
-          file
+          file {
+            publicURL
+          }
           date(formatString: "MMMM DD, YYYY")
         }
       }

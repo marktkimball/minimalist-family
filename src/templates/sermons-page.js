@@ -16,7 +16,7 @@ export const SermonsPageTemplate = ({
   contentComponent,
 }) => {
   const PageContent = contentComponent || Content;
-  console.info('SERMONS', sermons);
+
   return (
     <>
       <MiniHero image={SermonsImage} title={title} subtitle={subtitle} />

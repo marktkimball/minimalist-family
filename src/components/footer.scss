@@ -1,6 +1,6 @@
 footer.footer {
   padding: 3rem 0rem;
-  background-color: #1d3754;
+  background-color: #fff;
 }
 
 .footer-list-container {
@@ -12,7 +12,7 @@ footer.footer {
     margin-bottom: 32px;
 
     h4 {
-      color: #fff;
+      color: #333;
       font-size: 24px;
       margin: 0 0 24px 0;
     }
@@ -24,23 +24,23 @@ footer.footer {
     margin: 0;
 
     li {
-      color: #fff;
+      color: #333;
       margin-bottom: 8px;
     }
 
     a {
-      color: #9e9e9e;
+      color: #000;
       text-decoration: none;
       transition: all 200ms ease-in-out;
 
       &:hover {
-        color: #fff;
+        color: #333;
         text-decoration: underline;
       }
     }
 
     .phone-link {
-      color: #fff;
+      color: #333;
 
       &:hover {
         text-decoration: none;
@@ -48,7 +48,7 @@ footer.footer {
     }
 
     .visit-us-link {
-      color: #fff;
+      color: #333;
       cursor: pointer;
 
       &:hover {
@@ -59,12 +59,12 @@ footer.footer {
 }
 
 .copyright {
-  color: #fafafa;
+  color: #333;
   font-size: 12px;
   text-align: center;
 
   .copyright-link {
-    color: #fafafa;
+    color: #333;
 
     &:hover {
       text-decoration: underline;
@@ -73,17 +73,20 @@ footer.footer {
 }
 
 .social {
-  padding: 1rem 5rem 0 5rem;
   display: flex;
   justify-content: flex-end;
 
   .social-icon {
-    filter: invert(0.5);
-    margin-right: 32px;
+    margin: 0 16px;
     transition: filter 300ms ease-in-out;
+  }
+
+  a {
+    display: flex;
+    color: #333;
 
     &:hover {
-      filter: invert(1);
+      color: #333;
     }
   }
 }
@@ -92,5 +95,9 @@ footer.footer {
   .footer-list-container {
     flex-direction: column;
     text-align: center;
+  }
+
+  .social {
+    justify-content: center;
   }
 }

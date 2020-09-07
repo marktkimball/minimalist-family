@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Branch Hill Baptist Church',
+    title: 'Audrey Walsh Photography',
     description:
-      'Branch Hill Baptist Church. Loveland, Ohio. Discover a church that is designed for you and your family--designed for every aspect of your life. Build a heritage of faith.',
+      'Audrey Walsh Photography. Phoenix, Arizona. Weddings, couples, lifestyle, events.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

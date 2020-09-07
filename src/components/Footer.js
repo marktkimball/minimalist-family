@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logo.png';
-import FacebookIcon from '../img/social/facebook.svg';
-import YoutubeIcon from '../img/social/youtube.svg';
+import InstagramIcon from '../img/social/instagram.svg';
 import './footer.scss';
 
 const Footer = class extends React.Component {
@@ -12,65 +11,44 @@ const Footer = class extends React.Component {
         <div className="content has-text-centered">
           <img
             src={logo}
-            alt="Branch Hill Baptist Church"
-            style={{ width: '14em', height: '3.78em' }}
+            alt="Audrey Walsh Photography"
+            style={{ width: '300px' }}
           />
         </div>
+
         <div className="content">
           <div className="container footer-list-container">
             <div className="footer-list-group">
-              <h4>About</h4>
-              <ul className="footer-link-list">
-                <li>
-                  <Link to="/beliefs">Our Beliefs</Link>
-                </li>
-                <li>
-                  <Link to="/history">Our History</Link>
-                </li>
-                <li>
-                  <Link to="/missions">Missions</Link>
-                </li>
-                <li>
-                  <Link to="/leadership">Leadership</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-list-group">
-              <h4>Contact</h4>
               <ul className="footer-link-list contact-list">
                 <li>
-                  <a className="phone-link" href="tel:5136833663">
-                    phone: (513) 683-3663
-                  </a>
-                </li>
-                <li>email: info@branchhill.org</li>
-                <li>fax: (513) 683-4685</li>
-              </ul>
-            </div>
-            <div className="footer-list-group">
-              <h4>Visit</h4>
-              <ul className="footer-link-list contact-list">
-                <li>Sunday: 11am & 6pm</li>
-                <li>Wednesday: 7pm</li>
-                <li>
-                  <a
-                    className="visit-us-link"
-                    href="https://goo.gl/maps/88B9rQsy9huwo7dy7"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <div>6526 Guinea Pike</div>
-                    <div>Loveland, Ohio 45140</div>
+                  <a href="mailto: audrey@gmail.com">
+                    email: audreywalshphotography@gmail.com
                   </a>
                 </li>
               </ul>
+            </div>
+            <div className="social">
+              <a
+                title="instagram"
+                href="https://www.instagram.com/audreywalshphotography/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  className="social-icon"
+                  src={InstagramIcon}
+                  alt="Instagram"
+                  style={{ width: '1.5em', height: '1.5em' }}
+                />
+                @audreywalshphotography
+              </a>
             </div>
           </div>
         </div>
         <div className="content">
           <div className="container copyright">
-            Copyright © {new Date().getFullYear()} Branch Hill Baptist Church.
-            All rights reserved.
+            Copyright © {new Date().getFullYear()} Audrey Walsh Photography. All
+            rights reserved.
             <p>
               Created by{' '}
               <a
@@ -85,34 +63,6 @@ const Footer = class extends React.Component {
             <Link className="copyright-link" to="/credits">
               Credits
             </Link>
-          </div>
-          <div className="social">
-            <a
-              title="facebook"
-              href="https://www.facebook.com/branchhillbaptist/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img
-                className="social-icon"
-                src={FacebookIcon}
-                alt="Facebook"
-                style={{ width: '1.5em', height: '1.5em' }}
-              />
-            </a>
-            <a
-              title="youtube"
-              href="https://www.youtube.com/channel/UCAxOzmmPhv2SAyaA1z69zJg/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img
-                className="social-icon"
-                src={YoutubeIcon}
-                alt="YouTube"
-                style={{ width: '1.5em', height: '1.5em' }}
-              />
-            </a>
           </div>
         </div>
       </footer>

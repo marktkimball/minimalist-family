@@ -1,3 +1,42 @@
+.featured-images-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 24px;
+  margin: 32px;
+}
+
+.grid-1 {
+  grid-row: span 2;
+  grid-column: 1;
+}
+
+.grid-2 {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.grid-3 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.grid-4 {
+  grid-row: span 2;
+  grid-column: 3;
+}
+
+.featured-image-caption {
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.featured-image-secondary-caption {
+  margin-left: 4px;
+  font-weight: normal;
+  color: #999;
+}
+
 .about-page-lead {
   font-size: 28px;
   margin: 60px auto;
@@ -13,36 +52,6 @@
   }
 }
 
-.paypal-container {
-  display: flex;
-  justify-content: center;
-
-  .paypal-button {
-    cursor: pointer;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    border: 2px solid #2b2b2b;
-    padding: 8px 22px;
-    border-radius: 2px;
-    transition: box-shadow 200ms ease-in-out;
-
-    &:hover {
-      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-        0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-    }
-  }
-}
-
-.live-stream-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  p.live-stream-loading-message {
-    margin-bottom: 48px;
-  }
-}
-
 .credits-headline {
   font-size: 32px;
   margin-bottom: 16px;
@@ -53,12 +62,17 @@
   margin-left: 40px;
 }
 
-.missionaries-container {
-  margin: 120px 0;
-}
-
 @media only screen and (max-width: 767px) {
   .about-subsection {
     padding: 0;
+  }
+
+  .featured-images-wrapper {
+    display: block;
+    margin: 32px 8px;
+
+    > * {
+      margin-bottom: 32px;
+    }
   }
 }

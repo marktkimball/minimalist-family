@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;800&family=Work+Sans&display=swap');
 
 // Config vars
-$brand-primary: #1d3754;
-$brand-secondary: #ce6857;
-$brand-primary-text: #1d3754;
+$brand-primary: #ffffff;
+$brand-secondary: #d4af37;
+$brand-primary-text: #ffffff;
 $brand-primary-text-invert: #fff;
 
 $primary: $brand-primary-text;
@@ -14,32 +14,6 @@ $black: #2b2523;
 
 body {
   font-family: 'Work Sans', sans-serif !important;
-}
-
-.special-announcements-banner {
-  background: $brand-secondary;
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 8px;
-  text-align: center;
-  margin-top: -52px;
-  animation: 500ms ease-in-out 600ms 1 slideInFromTop forwards;
-
-  color: #fff;
-
-  &:hover {
-    color: #fff;
-  }
-}
-
-@keyframes slideInFromTop {
-  0% {
-    margin-top: -52px;
-  }
-  100% {
-    margin-top: 0;
-  }
 }
 
 .container {

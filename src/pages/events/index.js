@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import EventRoll from '../../components/EventRoll';
 import MiniHero from '../../components/MiniHero';
-import EventsImage from '../../img/events.jpg';
+import EventsImage from '../../img/about-us.jpg';
 
 export default class EventsIndexPage extends React.Component {
   render() {

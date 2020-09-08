@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MiniHero from '../components/MiniHero';
 import { graphql } from 'gatsby';
-import AboutUsImage from '../img/about-us.jpg';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 
@@ -10,18 +8,20 @@ import './pages.scss';
 
 export const AboutPageTemplate = ({
   title,
-  subtitle,
+  image,
   content,
   contentComponent,
 }) => {
   const PageContent = contentComponent || Content;
+
   return (
-    <>
-      <MiniHero image={AboutUsImage} title={title} subtitle={subtitle} />
-      <section className="section section--gradient">
-        <PageContent className="content" content={content} />
-      </section>
-    </>
+    <section className="section section--gradient text-align-center">
+      <div className="about-me-intro">
+        <h2>{title}</h2>
+        <img src={image.publicURL} />
+      </div>
+      <PageContent className="content" content={content} />
+    </section>
   );
 };
 
@@ -39,7 +39,7 @@ const AboutPage = ({ data }) => {
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
-        subtitle={post.frontmatter.subtitle}
+        image={post.frontmatter.image}
         content={post.html}
       />
     </Layout>
@@ -58,7 +58,9 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
-        subtitle
+        image {
+          publicURL
+        }
       }
     }
   }

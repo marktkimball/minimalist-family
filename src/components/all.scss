@@ -92,16 +92,38 @@ body {
 
 @import '~bulma';
 
-.home-jumbotron {
-  width: 100%;
-  height: 100vh;
-  background-position: 50%;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 12px;
 }
 
 .headline-text {
@@ -125,6 +147,10 @@ body {
 .main-pitch {
   font-size: 5rem;
   margin: 96px 0;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 a {

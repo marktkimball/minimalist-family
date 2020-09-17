@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Layout from '../../components/Layout'
+import React from 'react';
+import Link from 'gatsby-link';
+import Layout from '../../components/Layout';
 
 export default class Index extends React.Component {
   render() {
@@ -17,9 +17,6 @@ export default class Index extends React.Component {
               <ul>
                 <li>
                   <Link to="/contact">Basic contact form</Link>
-                </li>
-                <li>
-                  <Link to="/contact/file-upload/">Form with file upload</Link>
                 </li>
               </ul>
 
@@ -45,6 +42,6 @@ export default class Index extends React.Component {
           </div>
         </section>
       </Layout>
-    )
+    );
   }
 }

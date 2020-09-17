@@ -1,19 +1,22 @@
 @import '~bulma/sass/utilities/initial-variables';
-@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;800&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display:wght@900&display=swap');
 
 // Config vars
 $brand-primary: #ffffff;
 $brand-secondary: #d4af37;
-$brand-primary-text: #ffffff;
-$brand-primary-text-invert: #fff;
+$brand-primary-text: #212121;
+$brand-primary-text-invert: #ffffff;
 
 $primary: $brand-primary-text;
 $primary-invert: $brand-primary-text-invert;
 $body-color: #333;
 $black: #2b2523;
 
-body {
-  font-family: 'Work Sans', sans-serif !important;
+body,
+button,
+input,
+textarea {
+  font-family: 'Alice', sans-serif !important;
 }
 
 .container {
@@ -76,18 +79,12 @@ body {
   }
 }
 
-.event-list-item.is-featured {
-  background-color: #329adc3d;
-}
-
-.event-list-item header {
-  display: flex;
+.portfolio-list-item header {
   margin-bottom: 1em;
 }
 
-.event-list-item .featured-thumbnail {
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+.portfolio-list-item .featured-thumbnail {
+  margin: 0 0 1.5em 0;
 }
 
 @import '~bulma';
@@ -127,26 +124,21 @@ h6 {
 }
 
 .headline-text {
-  font-family: 'Eczar', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
 }
 
 .sub-headline-text {
-  font-family: 'Eczar', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .alt-headline-text {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Alice', sans-serif;
   font-weight: bold;
 }
 
 .body-text {
-  font-family: 'Work Sans', sans-serif;
-}
-
-.main-pitch {
-  font-size: 5rem;
-  margin: 96px 0;
+  font-family: 'Alice', sans-serif;
 }
 
 .text-align-center {
@@ -163,26 +155,12 @@ a {
 }
 
 @media only screen and (max-width: 767px) {
-  .event-list-item .featured-thumbnail {
-    flex-basis: 50%;
-  }
-
-  .event-list-item header {
+  .portfolio-list-item header {
     display: block;
   }
-  .event-list-item .featured-thumbnail {
+  .portfolio-list-item .featured-thumbnail {
     text-align: center;
-    max-width: 70%;
     margin: 0 0 1em;
-  }
-
-  .main-pitch {
-    font-size: 2.4rem;
-    margin: 36px 0;
-  }
-
-  .home-jumbotron {
-    background-attachment: scroll;
   }
 }
 

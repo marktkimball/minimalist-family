@@ -17,7 +17,7 @@ export const AboutPageTemplate = ({
   return (
     <section className="section section--gradient text-align-center">
       <div className="about-me-intro">
-        <h2>{title}</h2>
+        <h2 className="headline-text">{title}</h2>
         <img src={image.publicURL} />
       </div>
       <PageContent className="content" content={content} />

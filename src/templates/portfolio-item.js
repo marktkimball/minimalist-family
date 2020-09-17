@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 
-export const EventItemTemplate = ({
+export const PortfolioItemTemplate = ({
   address,
   date,
   content,
@@ -25,19 +25,11 @@ export const EventItemTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="headline-text title is-size-2">{title}</h1>
-            <div className="event-meta-data-container">
-              <div className="alt-headline-text event-date-text">{date}</div>
-              <div className="event-location-text">
-                Location:{' '}
-                <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${address}`}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {address}
-                </a>
+            <div className="portfolio-meta-data-container">
+              <div className="alt-headline-text portfolio-date-text">
+                {date}
               </div>
-              <p className="event-description-text">{description}</p>
+              <p className="portfolio-description-text">{description}</p>
             </div>
             <hr />
             <PostContent content={content} />
@@ -60,7 +52,7 @@ export const EventItemTemplate = ({
   );
 };
 
-EventItemTemplate.propTypes = {
+PortfolioItemTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -70,19 +62,19 @@ EventItemTemplate.propTypes = {
   helmet: PropTypes.object,
 };
 
-const EventItem = ({ data }) => {
+const PortfolioItem = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <EventItemTemplate
+      <PortfolioItemTemplate
         content={post.html}
         contentComponent={HTMLContent}
         date={post.frontmatter.date}
         address={post.frontmatter.address}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Event">
+          <Helmet titleTemplate="%s | Portfolio">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -97,16 +89,16 @@ const EventItem = ({ data }) => {
   );
 };
 
-EventItem.propTypes = {
+PortfolioItem.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 };
 
-export default EventItem;
+export default PortfolioItem;
 
 export const pageQuery = graphql`
-  query EventItemByID($id: String!) {
+  query PortfolioItemByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -115,7 +107,6 @@ export const pageQuery = graphql`
         title
         description
         tags
-        address
       }
     }
   }

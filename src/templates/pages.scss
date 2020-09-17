@@ -83,6 +83,12 @@
     padding: 0;
   }
 
+  .about-me-intro {
+    img {
+      max-width: 100%;
+    }
+  }
+
   .featured-images-wrapper {
     display: block;
     margin: 32px 8px;

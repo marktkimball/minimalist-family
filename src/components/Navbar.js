@@ -19,7 +19,7 @@ const Navbar = () => (
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/events">Portfolio</Link>
+          <Link to="/portfolio">Portfolio</Link>
         </li>
         <li className="nav-item-cta-container">
           <Link className="nav-item-cta" to="/contact">

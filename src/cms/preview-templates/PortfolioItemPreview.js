@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { EventItemTemplate } from '../../templates/event-item';
+import { PortfolioItemTemplate } from '../../templates/portfolio-item';
 
-const EventItemPreview = ({ entry, widgetFor }) => {
+const PortfolioItemPreview = ({ entry, widgetFor }) => {
   const tags = entry.getIn(['data', 'tags']);
   return (
-    <EventItemTemplate
+    <PortfolioItemTemplate
       content={widgetFor('body')}
       description={entry.getIn(['data', 'description'])}
       tags={tags && tags.toJS()}
@@ -16,11 +16,11 @@ const EventItemPreview = ({ entry, widgetFor }) => {
   );
 };
 
-EventItemPreview.propTypes = {
+PortfolioItemPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 };
 
-export default EventItemPreview;
+export default PortfolioItemPreview;

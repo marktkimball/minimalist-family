@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 export const IndexPageTemplate = ({ featuredImages }) => (
   <div className="featured-images-wrapper">
     {featuredImages.map((featured, index) => (
-      <div className={`grid-${index + 1}`}>
+      <div key={featured.caption} className={`grid-${index + 1}`}>
         <div className="featured-image-container">
           <PreviewCompatibleImage imageInfo={featured.image} />
           <div className="featured-image-caption">

@@ -20,11 +20,11 @@ const Footer = () => (
         <a
           className="footer-link"
           title="instagram"
-          href="https://www.instagram.com/audreywalshphoto/"
+          href="https://www.instagram.com/audreywalshphotography/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          instagram: @audreywalshphoto
+          instagram: @audreywalshphotography
         </a>
       </div>
     </div>

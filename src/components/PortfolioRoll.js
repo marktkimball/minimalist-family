@@ -26,7 +26,7 @@ class PortfolioRoll extends React.Component {
                 <PreviewCompatibleImage
                   imageInfo={{
                     image: post.frontmatter.featuredimage,
-                    alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                    alt: `featured image thumbnail for portfolio ${post.frontmatter.title}`,
                   }}
                 />
               </div>
@@ -74,7 +74,7 @@ export default () => (
               frontmatter {
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1200, maxHeight: 800, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }

@@ -1,16 +1,16 @@
 ---
 templateKey: index-page
 featuredImages:
-  - image: /img/featured-1.jpg
+  - image: /img/santa-monica-6.jpg
     caption: Street signs
     secondaryCaption: Venice, CA
-  - image: /img/featured-2.jpg
+  - image: /img/santa-monica-7.jpg
     caption: Alone on the streets
     secondaryCaption: Venice, CA
   - image: /img/featured-3.jpg
     caption: A far off look
     secondaryCaption: Venice, CA
-  - image: /img/featured-4.jpg
-    caption: Into the unknown
-    secondaryCaption: Venice, CA
+  - image: /img/september-engagement-1.jpg
+    caption: Engagement
+    secondaryCaption: Phoenix, AZ
 ---

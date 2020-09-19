@@ -7,10 +7,10 @@ import Content, { HTMLContent } from '../components/Content';
 import './pages.scss';
 
 export const AboutPageTemplate = ({
-  title,
-  image,
   content,
   contentComponent,
+  image,
+  title,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -18,7 +18,7 @@ export const AboutPageTemplate = ({
     <section className="section section--gradient text-align-center">
       <div className="about-me-intro">
         <h2 className="headline-text">{title}</h2>
-        <img src={image.publicURL} />
+        <img alt="about me" src={image.publicURL} />
       </div>
       <PageContent className="content" content={content} />
     </section>
@@ -26,9 +26,10 @@ export const AboutPageTemplate = ({
 };
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  image: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 const AboutPage = ({ data }) => {
@@ -37,10 +38,10 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        image={post.frontmatter.image}
         content={post.html}
+        contentComponent={HTMLContent}
+        image={post.frontmatter.image}
+        title={post.frontmatter.title}
       />
     </Layout>
   );
@@ -57,10 +58,10 @@ export const aboutPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
         image {
           publicURL
         }
+        title
       }
     }
   }

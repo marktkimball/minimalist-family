@@ -1,5 +1,5 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
 title: Hi, I'm Audrey!
 image: /img/audrey_walsh.jpg

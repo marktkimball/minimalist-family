@@ -18,7 +18,7 @@ export const AboutPageTemplate = ({
     <section className="section section--gradient text-align-center">
       <div className="about-me-intro">
         <h2 className="headline-text">{title}</h2>
-        <img alt="about me" src={image.publicURL} />
+        <img alt="About me" src={image.publicURL} />
       </div>
       <PageContent className="content" content={content} />
     </section>
@@ -34,6 +34,7 @@ AboutPageTemplate.propTypes = {
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  console.info('DATA', data);
 
   return (
     <Layout>

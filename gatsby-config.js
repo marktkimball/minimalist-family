@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Audrey Walsh Photography',
     description:
-      'Audrey Walsh Photography. Phoenix, Arizona. Weddings, couples, lifestyle, events.',
+      'Audrey Walsh Photography. Phoenix, Arizona. Weddings, engagements, couples, lifestyle, events.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

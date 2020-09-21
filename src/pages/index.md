@@ -1,13 +1,13 @@
 ---
 templateKey: index-page
 featuredImages:
-  - image: /img/couple.jpg
-    caption: Engagement
+  - image: /img/jenearl.jpg
+    caption: Wedding
     secondaryCaption: Arizona
   - image: /img/flower.jpg
     caption: Wedding Bouquet
     secondaryCaption: Arizona Wedding
-  - image: /img/jenearl.jpg
+  - image: /img/wr5y0020-3-.jpg
     caption: "Wedding "
     secondaryCaption: Scottsdale, AZ
   - image: /img/september-engagement-1.jpg

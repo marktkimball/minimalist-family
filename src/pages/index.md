@@ -1,10 +1,10 @@
 ---
 templateKey: index-page
 featuredImages:
-  - image: /img/jenearl.jpg
+  - image: /img/flower.jpg
     caption: Wedding
     secondaryCaption: Arizona
-  - image: /img/flower.jpg
+  - image: /img/jenearl.jpg
     caption: Wedding Bouquet
     secondaryCaption: Arizona Wedding
   - image: /img/wr5y0020-3-.jpg

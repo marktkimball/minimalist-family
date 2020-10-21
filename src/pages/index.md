@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
 featuredImages:
-  - image: /img/flower.jpg
-    caption: Bouquet
+  - image: /img/8b629545-b3bc-4493-8152-f738ba933783.jpeg
+    caption: "Wedding "
     secondaryCaption: Arizona
   - image: /img/jenearl.jpg
     caption: Wedding Bouquet

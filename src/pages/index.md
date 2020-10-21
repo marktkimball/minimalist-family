@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 featuredImages:
-  - image: /img/8b629545-b3bc-4493-8152-f738ba933783.jpeg
+  - image: /img/28908f79-ad57-4559-b470-37f563ff8f65.jpeg
     caption: "Wedding "
     secondaryCaption: Arizona
   - image: /img/jenearl.jpg

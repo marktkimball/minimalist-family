@@ -14,7 +14,7 @@ const Footer = () => (
 
     <div className="content">
       <div className="container footer-group-container">
-        <a className="footer-link" href="mailto: audrey@gmail.com">
+        <a className="footer-link" href="mailto: audreywalshphotography@gmail.com">
           email: audreywalshphotography@gmail.com
         </a>
         <a

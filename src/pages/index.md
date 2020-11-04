@@ -10,7 +10,7 @@ featuredImages:
   - image: /img/santa-monica-8.jpg
     caption: "Wedding "
     secondaryCaption: Scottsdale, AZ
-  - image: /img/couple.jpg
+  - image: /img/img_9236.jpg
     caption: Engagement
     secondaryCaption: Phoenix, AZ
 ---

@@ -1,0 +1,9 @@
+@font-face {
+  font-family: SimpleScript;
+  src: url("./SimpleScriptRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: Fitalia;
+  src: url("./Fitalia.woff") format("woff");
+}

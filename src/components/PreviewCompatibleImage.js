@@ -1,10 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import React from "react";
+import PropTypes from "prop-types";
+import Img from "gatsby-image";
 
-const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: '5px' };
-  const { alt = '', childImageSharp, image } = imageInfo;
+const PreviewCompatibleImage = ({ imageInfo, imageStyle = {} }) => {
+  const { alt = "", childImageSharp, image } = imageInfo;
 
   if (!!image && !!image.childImageSharp) {
     return (
@@ -16,11 +15,11 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />;
   }
 
-  if (!!image && typeof image === 'string') {
+  if (!!image && typeof image === "string") {
     return <img style={imageStyle} src={image} alt={alt} />;
   }
 
-  if (!image && !!imageInfo && typeof imageInfo === 'string') {
+  if (!image && !!imageInfo && typeof imageInfo === "string") {
     return <img style={imageStyle} src={imageInfo} alt={alt} />;
   }
 

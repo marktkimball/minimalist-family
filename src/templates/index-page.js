@@ -1,41 +1,77 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
-import Layout from '../components/Layout';
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Button from "../components/Button";
+import Layout from "../components/Layout";
+import HeroHeader from "../components/HeroHeader";
+import EmailSignup from "../components/EmailSignup";
+import AboutContent from "../components/AboutContent";
+import BlogList from "../components/BlogList";
 
-export const IndexPageTemplate = ({ featuredImages }) => (
-  <div className="featured-images-wrapper">
-    {featuredImages.map((featured, index) => (
-      <div key={featured.caption} className={`grid-${index + 1}`}>
-        <div className="featured-image-container">
-          <PreviewCompatibleImage imageInfo={featured.image} />
-          <div className="featured-image-caption">
-            {featured.caption}
-            {featured.secondaryCaption && (
-              <span className="featured-image-secondary-caption">
-                - {featured.secondaryCaption}
-              </span>
-            )}
-          </div>
-        </div>
+import "./index-page.scss";
+
+export const IndexPageTemplate = ({
+  heroContent,
+  welcomeContent,
+  aboutContent,
+  latestPosts,
+}) => (
+  <div>
+    <HeroHeader {...heroContent} />
+
+    {/* Welcome Section */}
+    <section className="sub-section main-feature-section">
+      <h2 className="scripted-heading">{welcomeContent.heading}</h2>
+      <div>
+        <p>{welcomeContent.content}</p>
       </div>
-    ))}
+      <Button to="/about">{welcomeContent.linkText}</Button>
+    </section>
+
+    {/* Latest Posts Section */}
+    <section className="sub-section latest-posts-section">
+      <h2 className="scripted-heading">Latest Posts</h2>
+      <BlogList data={latestPosts} />
+    </section>
+
+    {/* Subscribe Section */}
+    <section className="sub-section subscribe-section">
+      <EmailSignup />
+    </section>
+
+    {/* About Section */}
+    <section className="sub-section final-sub-section about-section">
+      <AboutContent image={aboutContent.aboutImage} imageFirst button>
+        {aboutContent.aboutBody}
+      </AboutContent>
+    </section>
   </div>
 );
 
-IndexPageTemplate.propTypes = {
-  featuredImages: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  ).isRequired,
-};
+// IndexPageTemplate.propTypes = {};
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <IndexPageTemplate featuredImages={frontmatter.featuredImages} />
+      <IndexPageTemplate
+        heroContent={{
+          leftImage: frontmatter.leftImage,
+          rightImage: frontmatter.rightImage,
+          subtitle: frontmatter.subtitle,
+        }}
+        welcomeContent={{
+          heading: frontmatter.welcomeHeading,
+          content: frontmatter.welcomeContent,
+          linkText: frontmatter.welcomeLinkText,
+        }}
+        latestPosts={data.latestPosts}
+        aboutContent={{
+          aboutBody: frontmatter.aboutBody,
+          aboutImage: frontmatter.aboutImage,
+        }}
+      />
     </Layout>
   );
 };
@@ -52,18 +88,62 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
-        featuredImages {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 500, quality: 90) {
-                ...GatsbyImageSharpFluid
+    latestPosts: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "post" } } }
+      limit: 3
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          excerpt(pruneLength: 400)
+          frontmatter {
+            title
+            author
+            date(formatString: "MMMM Do, YYYY")
+            tags
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 750, quality: 75) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
               }
             }
           }
-          caption
-          secondaryCaption
+          id
+        }
+      }
+    }
+
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
+        leftImage {
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        rightImage {
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        subtitle
+        welcomeHeading
+        welcomeContent
+        welcomeLinkText
+        aboutBody
+        aboutImage {
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }

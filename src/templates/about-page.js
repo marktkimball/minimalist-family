@@ -1,10 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Content, { HTMLContent } from '../components/Content';
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import Content, { HTMLContent } from "../components/Content";
 
-import './pages.scss';
+import "./pages.scss";
 
 export const AboutPageTemplate = ({
   content,
@@ -15,12 +16,12 @@ export const AboutPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient text-align-center">
+    <section className="section section--gradient text-align-center about-me">
       <div className="about-me-intro">
-        <h2 className="headline-text">{title}</h2>
-        <img alt="About me" src={image.publicURL} />
+        <h2 className="scripted-heading">{title}</h2>
+        <PageContent className="content" content={content} />
       </div>
-      <PageContent className="content" content={content} />
+      <PreviewCompatibleImage imageInfo={image} />
     </section>
   );
 };
@@ -59,7 +60,11 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         image {
-          publicURL
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
         title
       }

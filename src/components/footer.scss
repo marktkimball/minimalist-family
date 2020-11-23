@@ -1,6 +1,13 @@
 footer.footer {
+  border-top: 1px solid #333;
   padding: 3rem 0rem;
   background-color: #fff;
+}
+
+.footer-slogan {
+  font-weight: 600;
+  text-align: center;
+  margin: 32px 0;
 }
 
 .footer-group-container {
@@ -11,12 +18,28 @@ footer.footer {
 
 .footer-link {
   color: #333;
-  margin-bottom: 16px;
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 48px;
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
+}
+
+.created-by {
+  font-size: 14px;
 }
 
 @media only screen and (max-width: 767px) {

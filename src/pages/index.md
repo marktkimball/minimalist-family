@@ -1,16 +1,11 @@
 ---
 templateKey: index-page
-featuredImages:
-  - image: /img/28908f79-ad57-4559-b470-37f563ff8f65.jpeg
-    caption: "Wedding "
-    secondaryCaption: Arizona
-  - image: /img/jenearl.jpg
-    caption: Wedding Bouquet
-    secondaryCaption: Arizona Wedding
-  - image: /img/santa-monica-8.jpg
-    caption: "Wedding "
-    secondaryCaption: Scottsdale, AZ
-  - image: /img/img_9236.jpg
-    caption: Engagement
-    secondaryCaption: Phoenix, AZ
+leftImage: /img/intro-beach.jpg
+rightImage: /img/intro-map.jpg
+subtitle: Traveling light across the world
+welcomeHeading: Welcome!
+welcomeContent: The Minimalist Travel Family is the story of a young family that set off to explore the world in minimalistic style. Come along for our journey!
+welcomeLinkText: Read More
+aboutBody: Have you ever wanted to just sell everything and start over?  That’s exactly what I did with my family of 6!  On this blog, I share all my tips, tricks and adventures that come with being a minimalist family who gets to travel full time!!
+aboutImage: /img/sunset_crater.jpg
 ---

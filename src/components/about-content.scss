@@ -1,0 +1,33 @@
+@import "./all.scss";
+
+.section-wrapper {
+  @extend .depth-1;
+  background-color: $color-primary;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  > * {
+    flex-basis: 50%;
+  }
+}
+
+.copy-wrapper {
+  padding: 32px;
+}
+
+.about-copy {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-wrapper {
+    flex-direction: column-reverse;
+
+    > * {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,191 +1,78 @@
-.menu-container {
-  font-family: 'Playfair Display';
-  position: relative;
-  display: flex;
-  align-items: center;
-  background: #fff;
-  color: #333;
-  padding: 20px;
-  -webkit-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  z-index: 2;
+.nav-container {
+  background-color: #fff;
+  border-bottom: 1px solid #797a7e;
+  height: 125px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
-.menu-container a {
-  text-decoration: none;
-  color: #333;
+.nav-main {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 16px;
+}
+
+.nav-home-link {
+  border-bottom: 1px solid #333;
+  display: block;
+  font-family: "SimpleScript", cursive;
+  font-size: 24px;
+  margin-bottom: 8px;
   padding-bottom: 8px;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-a.menu-logo {
-  line-height: 0;
-  margin: 0 20px;
-  border-bottom: none;
-}
-
-.menu-logo img {
-  max-width: 250px;
-  flex-shrink: 0;
-}
-
-.menu-container a:hover {
-  color: #d4af37;
-  text-decoration: none;
-  border-bottom-color: #d4af37;
-}
-
-.menu-container input {
-  display: block;
-  width: 35px;
-  height: 25px;
-  margin: 0;
-  position: absolute;
-  cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
-}
-
-/* Burger menu */
-.menu-container span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #000;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-}
-
-.menu-container span:first-child {
-  transform-origin: 0% 0%;
-}
-
-.menu-container span:nth-child(3) {
-  transform-origin: 0% 100%;
-}
-
-.menu-container input:checked ~ span {
+  color: #333;
   opacity: 1;
-  transform: rotate(45deg) translate(3px, -1px);
-  background: #000;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.5;
+  }
 }
 
-.menu-container input:checked ~ span:nth-child(4) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+.nav-other-links {
+  padding: 8px 0;
 }
 
-.menu-container input:checked ~ span:nth-child(3) {
-  transform: rotate(-45deg) translate(-5px, 11px);
+.nav-item {
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-left: 16px;
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.5;
+  }
 }
 
-.menu ul {
-  margin-left: auto;
-  list-style: none;
-}
-
-.menu li {
-  padding: 10px 0;
-  font-size: 20px;
-}
-
-/* mobile styles */
-@media only screen and (max-width: 767px) {
-  .menu-container {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .menu-logo {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .menu-logo img {
-    max-height: 30px;
-  }
-
-  .menu {
-    position: absolute;
-    box-sizing: border-box;
-    width: 300px;
-    right: -300px;
-    top: 0;
-    margin: -20px;
-    padding: 75px 50px 50px;
-    background: #fff;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-    transform-origin: 0% 0%;
-    transform: translateX(0%);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  }
-
-  .menu-container input:checked ~ .menu {
-    transform: translateX(-100%);
-  }
+.nav-item-active {
+  color: #797a7e;
 }
 
 /* desktop styles */
 @media only screen and (min-width: 768px) {
-  .menu-container {
-    width: 100%;
-  }
-
-  .menu-container a {
-    color: #000;
-  }
-
-  .menu-container input {
-    display: none;
-  }
-
-  /* Burger menu */
-  .menu-container span {
-    display: none;
-  }
-
-  .menu {
-    position: relative;
-    width: 100%;
+  .nav-main {
+    align-items: center;
     display: flex;
     justify-content: space-between;
   }
 
-  .menu ul {
-    align-items: center;
-    display: flex;
-    padding: 0;
+  .nav-container {
+    height: 68px;
   }
 
-  .menu li {
-    padding: 0 20px;
+  .nav-home-link {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 
-    &.nav-item-cta-container {
-      margin-left: 20px;
-      padding: 0;
-    }
-
-    .nav-item-cta {
-      border: 1px solid #d4af37;
-      color: #d4af37;
-      padding: 4px 20px;
-      transition: background 0.3s ease;
-
-      &:hover {
-        background: #d4af37;
-        color: #fff;
-      }
-    }
+  .nav-other-links {
+    padding: 0;
   }
 }

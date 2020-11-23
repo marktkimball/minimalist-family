@@ -1,51 +1,82 @@
-import React from 'react';
-import logo from '../img/logo.png';
-import './footer.scss';
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import logo from "../img/logo.png";
+import "./footer.scss";
 
-const Footer = () => (
-  <footer className="footer">
-    <div className="content has-text-centered">
-      <img
-        src={logo}
-        alt="Audrey Walsh Photography"
-        style={{ width: '300px' }}
-      />
-    </div>
+const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          social {
+            instagram
+          }
+          mailchimpUrl
+        }
+      }
+    }
+  `);
 
-    <div className="content">
-      <div className="container footer-group-container">
-        <a className="footer-link" href="mailto: audreywalshphotography@gmail.com">
-          email: audreywalshphotography@gmail.com
-        </a>
-        <a
-          className="footer-link"
-          title="instagram"
-          href="https://www.instagram.com/audreywalshphotography/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          instagram: @audreywalshphotography
-        </a>
+  return (
+    <footer className="footer">
+      <div className="content has-text-centered">
+        <img
+          src={logo}
+          alt="Minimalist Travel Family"
+          style={{ width: "300px" }}
+        />
       </div>
-    </div>
-    <div className="content">
-      <div className="container copyright">
-        Copyright © {new Date().getFullYear()} Audrey Walsh Photography. All
-        rights reserved.
-        <p>
-          Created by{' '}
+      <p className="footer-slogan">Traveling light across the world.</p>
+      <div className="content">
+        <div className="container footer-group-container">
           <a
-            className="footer-link copyright"
-            href="https://marktkimball.github.io/"
+            className="footer-link"
+            title="instagram"
+            href="https://www.instagram.com/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            MK Engineering
+            instagram: @minimalisttravelfamily
           </a>
-        </p>
+        </div>
       </div>
-    </div>
-  </footer>
-);
+      <hr />
+      <div className="footer-links">
+        <a
+          href={data.site.siteMetadata.mailchimpUrl}
+          target="__blank"
+          className="footer-link"
+        >
+          Subscribe
+        </a>
+        |
+        <a href="/rss.xml" className="footer-link">
+          RSS
+        </a>
+        |
+        <a href="/sitemap.xml" className="footer-link">
+          Sitemap
+        </a>
+      </div>
+      <div className="content">
+        <div className="container copyright">
+          Copyright © {new Date().getFullYear()} Minimalist Travel Family. All
+          rights reserved.
+          <p className="created-by">
+            Created by{" "}
+            <a
+              className="footer-link copyright"
+              href="https://marktkimball.github.io/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              MK Engineering
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

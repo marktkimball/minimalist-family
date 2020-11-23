@@ -2,73 +2,70 @@ backend:
   name: git-gateway
   branch: master
   commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
-    update: 'Update {{collection}} “{{slug}}”'
-    delete: 'Delete {{collection}} “{{slug}}”'
-    uploadMedia: '[skip ci] Upload “{{path}}”'
-    deleteMedia: '[skip ci] Delete “{{path}}”'
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'portfolio'
-    label: 'Portfolio'
-    folder: 'src/pages/portfolio'
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'portfolio-item',
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: blog-post,
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
-      - { label: 'Featured Image', name: featuredimage, widget: image }
+      - { label: Type, name: type, widget: hidden, default: post }
+      - { label: Title, name: title, widget: string }
+      - { label: Author, name: author, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Tags, name: tags, widget: list }
+      - { label: Featured Image, name: featuredImage, widget: image }
+      - { label: Body, name: body, widget: markdown }
 
-  - name: 'pages'
-    label: 'Pages'
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: 'src/pages/index.md'
-        label: 'Home Page'
-        name: 'index'
+      - file: "src/pages/index.md"
+        label: "Home Page"
+        name: "index"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'index-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
             }
+          - { label: Left Image, name: leftImage, widget: image }
+          - { label: Right Image, name: rightImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Welcome Heading, name: welcomeHeading, widget: string }
+          - { label: Welcome Content, name: welcomeContent, widget: string }
           - {
-              label: Featured Images,
-              name: featuredImages,
-              widget: list,
-              allow_add: false,
-              fields:
-                [
-                  { label: Image, name: image, widget: image },
-                  { label: Caption, name: caption, widget: string },
-                  {
-                    label: 'Secondary Caption',
-                    name: secondaryCaption,
-                    widget: string,
-                  },
-                ],
+              label: Welcome Link Button,
+              name: welcomeLinkText,
+              widget: string,
             }
-      - file: 'src/pages/about/index.md'
+          - { label: About Content, name: aboutBody, widget: string }
+          - { label: About Image, name: aboutImage, widget: image }
+      - file: "src/pages/about/index.md"
         label: About
         name: about
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'about-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }

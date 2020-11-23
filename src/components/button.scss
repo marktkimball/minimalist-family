@@ -1,0 +1,10 @@
+@import "./all.scss";
+
+.button-wrapper {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.main-button {
+  @extend .button-base;
+}

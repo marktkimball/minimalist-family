@@ -1,14 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { IndexPageTemplate } from '../../templates/index-page';
+import React from "react";
+import PropTypes from "prop-types";
+import { IndexPageTemplate } from "../../templates/index-page";
 
 const IndexPagePreview = ({ entry }) => {
-  const data = entry.getIn(['data']).toJS();
+  const data = entry.getIn(["data"]).toJS();
 
   if (data) {
     return (
       <IndexPageTemplate
-        featuredImages={entry.getIn(['data', 'featuredImages']).toJS()}
+        leftImage={data.leftImage}
+        rightImage={data.rightImage}
+        subtitle={data.subtitle}
+        welcomeHeading={data.welcomeHeading}
+        welcomeContent={data.welcomeContent}
+        welcomeLinkText={data.welcomeLinkText}
+        aboutBody={data.aboutBody}
+        aboutImage={data.aboutImage}
       />
     );
   }

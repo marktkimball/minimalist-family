@@ -50,5 +50,8 @@
   },
   "devDependencies": {
     "prettier": "^2.0.5"
+  },
+  "resolutions": {
+    "sharp": "0.24.0"
   }
 }

@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Content, { HTMLContent } from "../components/Content";
 
-import "./pages.scss";
+import "./about-page.scss";
 
 export const AboutPageTemplate = ({
   content,
@@ -17,11 +17,13 @@ export const AboutPageTemplate = ({
 
   return (
     <section className="section section--gradient text-align-center about-me">
-      <div className="about-me-intro">
-        <h2 className="scripted-heading">{title}</h2>
-        <PageContent className="content" content={content} />
+      <h2 className="scripted-heading">{title}</h2>
+      <div className="about-me-content-container">
+        <div className="about-me-intro">
+          <PageContent className="content" content={content} />
+        </div>
+        <PreviewCompatibleImage imageInfo={image} />
       </div>
-      <PreviewCompatibleImage imageInfo={image} />
     </section>
   );
 };

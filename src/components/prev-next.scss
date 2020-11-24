@@ -1,0 +1,38 @@
+.prev-next-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 64px 0;
+}
+
+.prev-next-title-text {
+  color: #777;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.prev-next-link {
+  color: #333;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+    text-decoration: none;
+  }
+}
+
+.link-arrow-icon {
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}

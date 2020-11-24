@@ -8,9 +8,9 @@ const AboutContent = ({ children, image, imageFirst, button }) => {
   let switchOrderClassName = imageFirst ? "" : "flip-wrapper";
 
   return (
-    <section className={`section-wrapper ${switchOrderClassName}`}>
+    <section className={`about-section-wrapper ${switchOrderClassName}`}>
       <PreviewCompatibleImage imageInfo={image} />
-      <div className="copy-wrapper">
+      <div className="about-copy-wrapper">
         <h2 className="section-heading scripted-heading">About</h2>
         <div className="about-copy">{children}</div>
         {button && <Button to="/about">Read More</Button>}

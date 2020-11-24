@@ -7,8 +7,44 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
   return graphql(`
-    {
-      allMarkdownRemark(limit: 1000) {
+    query {
+      postsRemark: allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "post" } } }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              tags
+              templateKey
+            }
+          }
+          next {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
+
+      mainRemark: allMarkdownRemark(
+        filter: { frontmatter: { type: { ne: "post" } } }
+      ) {
         edges {
           node {
             id
@@ -29,19 +65,22 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
+    const posts = result.data.postsRemark.edges;
+    const mainPages = result.data.mainRemark.edges;
 
-    posts.forEach((edge) => {
-      const id = edge.node.id;
+    [...posts, ...mainPages].forEach(({ next, node, previous }) => {
+      const id = node.id;
       createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
+        path: node.fields.slug,
+        tags: node.frontmatter.tags,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          `src/templates/${String(node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
         context: {
           id,
+          prev: next, // prev = next is on purpose. in the context of the blog post template, the next post is the one posted later, not before
+          next: previous, // see above comment
         },
       });
     });

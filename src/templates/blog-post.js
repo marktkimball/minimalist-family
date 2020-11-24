@@ -6,23 +6,41 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Button from "../components/Button";
 import Content, { HTMLContent } from "../components/Content";
+import PrevNext from "../components/PrevNext";
 import "./blog-post.scss";
 
 export const BlogPostTemplate = ({
+  author,
   content,
   contentComponent,
-  tags,
   dateFormattedPretty,
-  title,
   helmet,
-  author,
+  next,
+  prev,
+  tags,
+  title,
 }) => {
   const PostContent = contentComponent || Content;
+  const nextDetails = !next
+    ? null
+    : {
+        linkPath: next.fields.slug,
+        linkText: next.frontmatter.title,
+        titleText: "Next Post",
+      };
+
+  const prevDetails = !prev
+    ? null
+    : {
+        linkPath: prev.fields.slug,
+        linkText: prev.frontmatter.title,
+        titleText: "Previous Post",
+      };
 
   return (
     <section className="section">
       {helmet || ""}
-      <div className="container content">
+      <div className="container content blog-container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light blog-post-title">
@@ -48,6 +66,7 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </div>
+      <PrevNext prevDetails={prevDetails} nextDetails={nextDetails} />
     </section>
   );
 };
@@ -61,14 +80,17 @@ BlogPostTemplate.propTypes = {
   dateFormattedPretty: PropTypes.string,
 };
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data;
+  const { prev, next } = pageContext;
 
   return (
     <Layout>
       <BlogPostTemplate
+        author={post.frontmatter.author}
         content={post.html}
         contentComponent={HTMLContent}
+        dateFormattedPretty={post.frontmatter.dateFormattedPretty}
         description={post.excerpt}
         helmet={
           <Helmet titleTemplate="%s | Blog">
@@ -76,10 +98,10 @@ const BlogPost = ({ data }) => {
             <meta name="description" content={`${post.excerpt}`} />
           </Helmet>
         }
+        next={next}
+        prev={prev}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        author={post.frontmatter.author}
-        dateFormattedPretty={post.frontmatter.dateFormattedPretty}
       />
     </Layout>
   );

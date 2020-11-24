@@ -1,6 +1,6 @@
-@import "./all.scss";
+@import "./variables.scss";
 
-.section-wrapper {
+.about-section-wrapper {
   @extend .depth-1;
   background-color: $color-primary;
   width: 90%;
@@ -13,7 +13,7 @@
   }
 }
 
-.copy-wrapper {
+.about-copy-wrapper {
   padding: 32px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .section-wrapper {
+  .about-section-wrapper {
     flex-direction: column-reverse;
 
     > * {

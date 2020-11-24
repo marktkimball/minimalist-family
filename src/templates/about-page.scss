@@ -1,0 +1,33 @@
+@import "../components/variables.scss";
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background-color: $color-primary;
+  width: 90%;
+  margin: 124px auto 64px auto;
+}
+
+.about-me-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me-intro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-content-container {
+    flex-direction: row;
+
+    > * {
+      width: 50%;
+    }
+  }
+}

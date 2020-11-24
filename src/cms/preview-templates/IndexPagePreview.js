@@ -9,14 +9,20 @@ const IndexPagePreview = ({ entry }) => {
   if (data) {
     return (
       <IndexPageTemplate
-        leftImage={data.leftImage}
-        rightImage={data.rightImage}
-        subtitle={data.subtitle}
-        welcomeHeading={data.welcomeHeading}
-        welcomeContent={data.welcomeContent}
-        welcomeLinkText={data.welcomeLinkText}
-        aboutBody={data.aboutBody}
-        aboutImage={data.aboutImage}
+        aboutContent={{
+          aboutBody: data.aboutBody,
+          aboutImage: data.aboutImage,
+        }}
+        heroContnet={{
+          leftImage: data.leftImage,
+          rightImage: data.rightImage,
+          subtitle: data.subtitle,
+        }}
+        welcomeContent={{
+          content: data.welcomeContent,
+          heading: data.welcomeHeading,
+          linkText: data.welcomeLinkText,
+        }}
       />
     );
   }

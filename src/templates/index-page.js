@@ -11,10 +11,10 @@ import BlogList from "../components/BlogList";
 import "./index-page.scss";
 
 export const IndexPageTemplate = ({
-  heroContent,
-  welcomeContent,
   aboutContent,
+  heroContent,
   latestPosts,
+  welcomeContent,
 }) => (
   <div>
     <HeroHeader {...heroContent} />
@@ -56,20 +56,20 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
+        aboutContent={{
+          aboutBody: frontmatter.aboutBody,
+          aboutImage: frontmatter.aboutImage,
+        }}
         heroContent={{
           leftImage: frontmatter.leftImage,
           rightImage: frontmatter.rightImage,
           subtitle: frontmatter.subtitle,
         }}
-        welcomeContent={{
-          heading: frontmatter.welcomeHeading,
-          content: frontmatter.welcomeContent,
-          linkText: frontmatter.welcomeLinkText,
-        }}
         latestPosts={data.latestPosts}
-        aboutContent={{
-          aboutBody: frontmatter.aboutBody,
-          aboutImage: frontmatter.aboutImage,
+        welcomeContent={{
+          content: frontmatter.welcomeContent,
+          heading: frontmatter.welcomeHeading,
+          linkText: frontmatter.welcomeLinkText,
         }}
       />
     </Layout>

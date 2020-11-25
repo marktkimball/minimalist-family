@@ -80,6 +80,30 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </div>
+      <form
+        method="POST"
+        action="https://staticman-minimalist-family.herokuapp.com/v2/entry/marktkimball/minimalist-family/master/comments"
+      >
+        <input name="options[slug]" type="hidden" value={slug} />
+        <label>
+          <input name="fields[name]" type="text" />
+          Name
+        </label>
+        <label>
+          <input name="fields[email]" type="email" />
+          E-mail
+        </label>
+        <label>
+          <input name="fields[website]" type="text" />
+          Website
+        </label>
+        <label>
+          <textarea name="fields[message]" />
+          Message
+        </label>
+
+        <button type="submit">Go!</button>
+      </form>
       <div className="blog-post-end blog-container">
         <h3 className="sub-headline-text">Thanks for reading!</h3>
         <SocialShare

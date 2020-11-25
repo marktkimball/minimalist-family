@@ -1,5 +1,7 @@
 module.exports = {
   siteMetadata: {
+    staticmanUrl:
+      "https://staticman-minimalist-family.herokuapp.com/v2/entry/marktkimball/minimalist-family.github.io/master/comments",
     siteUrl: "https://minimalisttravelfamily.com",
     author: "marktkimball",
     publisher: "minimalisttravelfamily.com",

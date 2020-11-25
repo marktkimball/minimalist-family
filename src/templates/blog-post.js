@@ -82,7 +82,7 @@ export const BlogPostTemplate = ({
       </div>
       <form
         method="POST"
-        action="https://staticman-minimalist-family.herokuapp.com/v2/entry/marktkimball/minimalist-family/master/comments"
+        action="https://staticman-minimalist-family.herokuapp.com/v3/entry/marktkimball/minimalist-family/master/comments"
       >
         <input name="options[slug]" type="hidden" value={slug} />
         <label>

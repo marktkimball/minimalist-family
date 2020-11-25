@@ -1,7 +1,8 @@
 .prev-next-container {
   display: flex;
   justify-content: space-between;
-  margin: 64px 0;
+  margin: 64px auto;
+  max-width: 1024px;
 }
 
 .prev-next-title-text {
@@ -27,6 +28,10 @@
 .link-arrow-icon {
   vertical-align: middle;
   margin: 0 4px;
+
+  &.icon-reverse {
+    transform: rotateY(180deg);
+  }
 }
 
 .tl {

@@ -1,0 +1,22 @@
+.social-share-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.social-share-text {
+  color: #777;
+  font-size: 14px;
+}
+
+.social-share-icon {
+  color: #333;
+  margin-left: 16px;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

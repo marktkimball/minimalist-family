@@ -1,5 +1,6 @@
 .blog-container {
   max-width: 1024px;
+  margin: 0 auto;
 }
 
 .blog-post-title {
@@ -11,4 +12,15 @@
 .blog-post-subtitle {
   text-align: center;
   margin: 16px 0;
+}
+
+.blog-post-end {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #333;
+}
+
+.blog-post-featured-image-container {
+  margin: 48px 0;
 }

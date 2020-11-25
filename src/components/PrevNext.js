@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import ArrowLeftCircle from "../img/arrow-left-circle.svg";
 import ArrowRightCircle from "../img/arrow-right-circle.svg";
 
 import "./prev-next.scss";
@@ -15,8 +14,8 @@ const PrevNext = ({ prevDetails, nextDetails }) => (
           )}
           <Link to={prevDetails.linkPath} className="prev-next-link">
             <img
-              className="link-arrow-icon"
-              src={ArrowLeftCircle}
+              className="link-arrow-icon icon-reverse"
+              src={ArrowRightCircle}
               alt="Previous"
               style={{ width: "1.5em", height: "1.5em" }}
             />

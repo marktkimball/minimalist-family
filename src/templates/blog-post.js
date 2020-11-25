@@ -7,6 +7,9 @@ import Layout from "../components/Layout";
 import Button from "../components/Button";
 import Content, { HTMLContent } from "../components/Content";
 import PrevNext from "../components/PrevNext";
+import SocialShare from "../components/SocialShare";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+
 import "./blog-post.scss";
 
 export const BlogPostTemplate = ({
@@ -14,11 +17,14 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   dateFormattedPretty,
+  featuredImage,
   helmet,
   next,
   prev,
   tags,
   title,
+  siteUrl,
+  slug,
 }) => {
   const PostContent = contentComponent || Content;
   const nextDetails = !next
@@ -49,7 +55,15 @@ export const BlogPostTemplate = ({
             <div className="blog-post-subtitle">
               by {author} on {dateFormattedPretty}
             </div>
+            <SocialShare
+              text="SHARE THIS POST"
+              shareTitle={title}
+              shareUrl={`${siteUrl}${slug}`}
+            />
             <hr />
+            <div className="blog-post-featured-image-container">
+              <PreviewCompatibleImage imageInfo={featuredImage} />
+            </div>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -65,6 +79,14 @@ export const BlogPostTemplate = ({
             ) : null}
           </div>
         </div>
+      </div>
+      <div className="blog-post-end blog-container">
+        <h3 className="sub-headline-text">Thanks for reading!</h3>
+        <SocialShare
+          text="SHARE THIS POST"
+          shareTitle={title}
+          shareUrl={`${siteUrl}${slug}`}
+        />
       </div>
       <PrevNext prevDetails={prevDetails} nextDetails={nextDetails} />
     </section>
@@ -89,6 +111,7 @@ const BlogPost = ({ data, pageContext }) => {
       <BlogPostTemplate
         author={post.frontmatter.author}
         content={post.html}
+        featuredImage={post.frontmatter.featuredImage}
         contentComponent={HTMLContent}
         dateFormattedPretty={post.frontmatter.dateFormattedPretty}
         description={post.excerpt}
@@ -102,6 +125,8 @@ const BlogPost = ({ data, pageContext }) => {
         prev={prev}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        slug={post.fields.slug}
+        siteUrl={data.site.siteMetadata.siteUrl}
       />
     </Layout>
   );
@@ -124,9 +149,24 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         tags
         author
         dateFormattedPretty: date(formatString: "MMMM Do, YYYY")
+      }
+      fields {
+        slug
+      }
+    }
+    site: site {
+      siteMetadata {
+        siteUrl
       }
     }
   }

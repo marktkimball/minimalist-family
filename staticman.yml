@@ -77,11 +77,10 @@ comments:
   # the name of the field and values are possible transformation types.
   transforms:
     email: md5
-
-  reCaptcha:
-    enabled: true
-    siteKey: "6LepaO0ZAAAAAGaETLmXEL4Ciq7agZqDrJtpuumR"
-    secret: "0CDmUzabOupwrNBz/r5cOGWakeIsAQRujSf1ntu8/OWT3zPManse+6e3YIKIcN/J55Ks7w31OaL3c/gyRuPuSKXXGAnfSQzj5UiNeprwwjdpMWtFrjZq7gw8UEYHcspMAsJcAVC2tosSwZIOajZ7UGJrrKmR8Nvjb1xZiGuJda6VGkykb9SglXpndtYjXp2R9P9dcPzVYvWAruUoG8dlTsULWR8pkw1vPsAySpr3b7GKj3Qyv+fwBVq2ANpt6IEx4t8QlFf6r4a9ljRO/dE6hpPzs/lwrgI1M+ND5nw2GO+RReF5i9eurXrTDcf99ihfGt0Is4xEHEQ/pzWEnHCBB6427T1p5y4OeX+lXzyUW7DyxI5atLSIMDCJnQa4GwtDJtdCNwOEz1Ccl7pno6Chxw+jjn+s3SsTXUDojjMrBmNcWIip6ZDSL//UELFOH0vG+Axbc8tC//hFPAmq1yVS8GxuEc2QPP3fF6aTMqLZW6GLbuzWLkHVfds9C2h1kvGFRwNfmD1e+j/IVmuXcDSRfpbKMpc1QBU2LHk49XRxZBpE275tEocwJCj57ixv1rkd3MvlWRU9Xc4e5MzwO/lLL4J0HshukwN4ZWNtFQM/ARLM32SZae4K39CC4vayr+OOnX2PdUFxCcgyBQZ2AbHE/0YTUGfeH5Ar39oLRWATU/A="
+  # reCaptcha:
+  #   enabled: true
+  #   siteKey: "6LepaO0ZAAAAAGaETLmXEL4Ciq7agZqDrJtpuumR"
+  #   secret: "0CDmUzabOupwrNBz/r5cOGWakeIsAQRujSf1ntu8/OWT3zPManse+6e3YIKIcN/J55Ks7w31OaL3c/gyRuPuSKXXGAnfSQzj5UiNeprwwjdpMWtFrjZq7gw8UEYHcspMAsJcAVC2tosSwZIOajZ7UGJrrKmR8Nvjb1xZiGuJda6VGkykb9SglXpndtYjXp2R9P9dcPzVYvWAruUoG8dlTsULWR8pkw1vPsAySpr3b7GKj3Qyv+fwBVq2ANpt6IEx4t8QlFf6r4a9ljRO/dE6hpPzs/lwrgI1M+ND5nw2GO+RReF5i9eurXrTDcf99ihfGt0Is4xEHEQ/pzWEnHCBB6427T1p5y4OeX+lXzyUW7DyxI5atLSIMDCJnQa4GwtDJtdCNwOEz1Ccl7pno6Chxw+jjn+s3SsTXUDojjMrBmNcWIip6ZDSL//UELFOH0vG+Axbc8tC//hFPAmq1yVS8GxuEc2QPP3fF6aTMqLZW6GLbuzWLkHVfds9C2h1kvGFRwNfmD1e+j/IVmuXcDSRfpbKMpc1QBU2LHk49XRxZBpE275tEocwJCj57ixv1rkd3MvlWRU9Xc4e5MzwO/lLL4J0HshukwN4ZWNtFQM/ARLM32SZae4K39CC4vayr+OOnX2PdUFxCcgyBQZ2AbHE/0YTUGfeH5Ar39oLRWATU/A="
   # Akismet spam detection
   # akismet:
   #   enabled: true

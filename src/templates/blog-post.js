@@ -101,6 +101,10 @@ export const BlogPostTemplate = ({
           <textarea name="fields[message]" />
           Message
         </label>
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LepaO0ZAAAAAGaETLmXEL4Ciq7agZqDrJtpuumR"
+        ></div>
 
         <button type="submit">Go!</button>
       </form>

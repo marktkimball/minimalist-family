@@ -38,6 +38,11 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
+        <script
+          src="https://www.google.com/recaptcha/api.js"
+          async
+          defer
+        ></script>
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />

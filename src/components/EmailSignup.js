@@ -31,25 +31,25 @@ const EmailSignup = () => {
           </label>
           <input
             className="form-input-field"
+            id="first-name"
+            name="FIRST NAME"
             placeholder="First Name"
             type="text"
-            name="FIRST NAME"
-            id="first-name"
           />
           <label className="clip" htmlFor="email-address">
             Email Address
           </label>
           <input
             className="form-input-field"
+            id="email-address"
+            name="EMAIL"
             placeholder="Email Address"
             type="text"
-            name="EMAIL"
-            id="email-address"
           />
           <input
             className="form-submit"
-            type="submit"
             name="subscribe"
+            type="submit"
             value="Sign Up"
           />
         </fieldset>

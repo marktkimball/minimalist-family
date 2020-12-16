@@ -9,12 +9,17 @@
   align-items: center;
 
   > * {
-    flex-basis: 50%;
+    flex-basis: 40%;
+
+    &:first-of-type {
+      margin-right: auto;
+    }
   }
 }
 
 .about-copy-wrapper {
   padding: 32px;
+  margin: 0 auto;
 }
 
 .about-copy {

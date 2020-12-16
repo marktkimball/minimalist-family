@@ -1,5 +1,7 @@
+@import "./variables.scss";
+
 .hero-section {
-  background-color: #f4f4f4;
+  background-color: $color-primary;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

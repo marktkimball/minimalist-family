@@ -8,6 +8,9 @@ import Button from "../components/Button";
 import Content, { HTMLContent } from "../components/Content";
 import PrevNext from "../components/PrevNext";
 import SocialShare from "../components/SocialShare";
+import Comments from "../components/Comments";
+import EmailSignup from "../components/EmailSignup";
+import CommentForm from "../components/CommentForm";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 import "./blog-post.scss";
@@ -19,6 +22,7 @@ export const BlogPostTemplate = ({
   dateFormattedPretty,
   featuredImage,
   helmet,
+  id,
   next,
   prev,
   tags,
@@ -80,30 +84,7 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </div>
-      <form
-        method="POST"
-        action="https://staticman-minimalist-family.herokuapp.com/v3/entry/marktkimball/minimalist-family/master/comments"
-      >
-        <input name="options[slug]" type="hidden" value={slug} />
-        <label>
-          <input name="fields[name]" type="text" />
-          Name
-        </label>
-        <label>
-          <input name="fields[email]" type="email" />
-          E-mail
-        </label>
-        <label>
-          <input name="fields[website]" type="text" />
-          Website
-        </label>
-        <label>
-          <textarea name="fields[message]" />
-          Message
-        </label>
 
-        <button type="submit">Go!</button>
-      </form>
       <div className="blog-post-end blog-container">
         <h3 className="sub-headline-text">Thanks for reading!</h3>
         <SocialShare
@@ -112,7 +93,15 @@ export const BlogPostTemplate = ({
           shareUrl={`${siteUrl}${slug}`}
         />
       </div>
+
       <PrevNext prevDetails={prevDetails} nextDetails={nextDetails} />
+
+      <div className="blog-post-sign-up-section">
+        <EmailSignup />
+      </div>
+
+      <Comments postId={id} />
+      <CommentForm postId={id} />
     </section>
   );
 };
@@ -145,6 +134,7 @@ const BlogPost = ({ data, pageContext }) => {
             <meta name="description" content={`${post.excerpt}`} />
           </Helmet>
         }
+        id={post.id}
         next={next}
         prev={prev}
         tags={post.frontmatter.tags}

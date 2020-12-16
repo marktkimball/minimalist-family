@@ -1,7 +1,5 @@
 module.exports = {
   siteMetadata: {
-    staticmanUrl:
-      "https://staticman-minimalist-family.herokuapp.com/v2/entry/marktkimball/minimalist-family.github.io/master/comments",
     siteUrl: "https://minimalisttravelfamily.com",
     author: "marktkimball",
     publisher: "minimalisttravelfamily.com",
@@ -147,6 +145,20 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sitemap`,
+    },
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyD0OrjA9QG4pRfI-UPzgmlUrEkf_6puN1M",
+          authDomain: "minimalist-travel-family.firebaseapp.com",
+          databaseURL: "https://minimalist-travel-family.firebaseio.com",
+          projectId: "minimalist-travel-family",
+          storageBucket: "minimalist-travel-family.appspot.com",
+          messagingSenderId: "982672517446",
+          appId: "1:982672517446:web:c801f7f5589dfba291dd47",
+        },
+      },
     },
     {
       resolve: "gatsby-plugin-netlify-cms",

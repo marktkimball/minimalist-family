@@ -1,3 +1,5 @@
+@import "../components/variables.scss";
+
 .blog-container {
   max-width: 1024px;
   margin: 0 auto;
@@ -23,4 +25,13 @@
 
 .blog-post-featured-image-container {
   margin: 48px 0;
+}
+
+.blog-post-sign-up-section {
+  margin: 64px 0 84px 0;
+
+  .signup-section {
+    @extend .depth-0;
+    background: transparent;
+  }
 }

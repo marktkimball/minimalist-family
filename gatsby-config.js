@@ -10,7 +10,7 @@ module.exports = {
     bannerImage: "/images/banner.jpg",
     blogPostsPerPage: 5,
     social: {
-      instagram: "",
+      instagram: "https://www.instagram.com/minimalisttravelfamily",
     },
     mailchimpUrl: "http://eepurl.com/hi7W1D",
   },

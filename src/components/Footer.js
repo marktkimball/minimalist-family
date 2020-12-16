@@ -32,7 +32,7 @@ const Footer = () => {
           <a
             className="footer-link"
             title="instagram"
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/minimalisttravelfamily"
             rel="noopener noreferrer"
             target="_blank"
           >

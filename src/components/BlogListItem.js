@@ -13,11 +13,6 @@ const BlogListItem = ({ node }) => (
           <p className="post-subtitle">
             by {node.frontmatter.author} on {node.frontmatter.date}
           </p>
-          {node.frontmatter.tags.length > 0 && (
-            <p className="post-tags">
-              tags: {node.frontmatter.tags.join(", ")}
-            </p>
-          )}
           <p className="post-excerpt">{node.excerpt}</p>
         </div>
         <div className="post-column">

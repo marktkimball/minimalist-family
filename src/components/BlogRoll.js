@@ -46,7 +46,6 @@ export default () => (
                 templateKey
                 author
                 date(formatString: "MMMM DD, YYYY")
-                tags
                 featuredImage {
                   childImageSharp {
                     fluid(maxWidth: 500, quality: 100) {

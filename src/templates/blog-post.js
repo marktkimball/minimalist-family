@@ -15,6 +15,52 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 import "./blog-post.scss";
 
+export const BlogPostContentTemplate = ({
+  author,
+  children,
+  date,
+  featuredImage,
+  siteUrl,
+  slug,
+  tags,
+  title,
+}) => (
+  <div className="container content blog-container">
+    <div className="columns">
+      <div className="column is-10 is-offset-1">
+        <h1 className="title is-size-2 has-text-weight-bold is-bold-light blog-post-title">
+          {title}
+        </h1>
+        <div className="blog-post-subtitle">
+          by {author} on {date}
+        </div>
+        <SocialShare
+          text="SHARE THIS POST"
+          shareTitle={title}
+          shareUrl={`${siteUrl}${slug}`}
+        />
+        <hr />
+        <div className="blog-post-featured-image-container">
+          <PreviewCompatibleImage imageInfo={featuredImage} />
+        </div>
+        {children}
+        {tags && tags.length ? (
+          <div style={{ marginTop: `4rem` }}>
+            <h4>Tags</h4>
+            <ul className="taglist">
+              {tags.map((tag) => (
+                <li key={tag + `tag`}>
+                  <Button to={`/tags/${kebabCase(tag)}/`}>{tag}</Button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      </div>
+    </div>
+  </div>
+);
+
 export const BlogPostTemplate = ({
   author,
   content,
@@ -50,40 +96,17 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       {helmet || ""}
-      <div className="container content blog-container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light blog-post-title">
-              {title}
-            </h1>
-            <div className="blog-post-subtitle">
-              by {author} on {dateFormattedPretty}
-            </div>
-            <SocialShare
-              text="SHARE THIS POST"
-              shareTitle={title}
-              shareUrl={`${siteUrl}${slug}`}
-            />
-            <hr />
-            <div className="blog-post-featured-image-container">
-              <PreviewCompatibleImage imageInfo={featuredImage} />
-            </div>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Button to={`/tags/${kebabCase(tag)}/`}>{tag}</Button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
-        </div>
-      </div>
+      <BlogPostContentTemplate
+        author={author}
+        date={dateFormattedPretty}
+        featuredImage={featuredImage}
+        siteUrl={siteUrl}
+        slug={slug}
+        tags={tags}
+        title={title}
+      >
+        <PostContent content={content} />
+      </BlogPostContentTemplate>
 
       <div className="blog-post-end blog-container">
         <h3 className="sub-headline-text">Thanks for reading!</h3>

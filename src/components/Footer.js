@@ -10,6 +10,7 @@ const Footer = () => {
         siteMetadata {
           social {
             instagram
+            youtube
           }
           mailchimpUrl
         }
@@ -32,11 +33,20 @@ const Footer = () => {
           <a
             className="footer-link"
             title="instagram"
-            href="https://www.instagram.com/minimalisttravelfamily"
+            href={data.site.siteMetadata.social.instagram}
             rel="noopener noreferrer"
             target="_blank"
           >
             instagram: @minimalisttravelfamily
+          </a>
+          <a
+            className="footer-link"
+            title="youtube"
+            href={data.site.siteMetadata.social.youtube}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            youtube: Minimalist Travel Family
           </a>
         </div>
       </div>

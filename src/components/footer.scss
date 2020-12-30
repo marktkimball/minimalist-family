@@ -1,6 +1,6 @@
 footer.footer {
   border-top: 1px solid #333;
-  padding: 3rem 0rem;
+  padding: 3rem 0;
   background-color: #fff;
 }
 
@@ -20,6 +20,7 @@ footer.footer {
   color: #333;
   opacity: 1;
   transition: opacity 200ms ease-in-out;
+  padding: 12px 0;
 
   &:hover {
     opacity: 0.5;
@@ -40,6 +41,7 @@ footer.footer {
 
 .created-by {
   font-size: 14px;
+  padding: 12px 0;
 }
 
 @media only screen and (max-width: 767px) {

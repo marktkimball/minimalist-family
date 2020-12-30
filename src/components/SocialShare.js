@@ -33,7 +33,9 @@ const SocialShare = ({ text, shareTitle, shareUrl }) => (
       />
     </a>
     <a
-      href={`https://www.pinterest.com/pin/create/button/?url=${shareUrl}`}
+      href={`https://www.pinterest.com/pin/create/link/?url=${encodeURIComponent(
+        shareUrl
+      )}`}
       target="_blank"
       rel="noopener noreferrer"
     >

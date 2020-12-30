@@ -11,6 +11,7 @@ module.exports = {
     blogPostsPerPage: 5,
     social: {
       instagram: "https://www.instagram.com/minimalisttravelfamily",
+      youtube: "https://www.youtube.com/channel/UCjUGz1Y3oBH8X_67NfOzhDQ",
     },
     mailchimpUrl: "http://eepurl.com/hi7W1D",
   },

@@ -8,7 +8,6 @@ tags:
   - Packing
   - Peace
   - God
-  - ""
 featuredImage: /img/pexels-tetyana-kovyrina-3572838.jpg
 ---
 *\*Disclosure: I only recommend products I would use myself and all opinions expressed here are our own. This post may contain affiliate links that at no additional cost to you, I may earn a small commission.\**

@@ -124,10 +124,14 @@ p {
 
 a {
   color: $brand-primary-text;
+  text-decoration: underline;
+  color: #333;
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
 
   &:hover {
-    color: #1d3754;
-    text-decoration: underline;
+    color: #212121;
+    opacity: 0.5;
   }
 }
 

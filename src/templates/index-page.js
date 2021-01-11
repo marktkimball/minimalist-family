@@ -32,6 +32,7 @@ export const IndexPageTemplate = ({
     <section className="sub-section latest-posts-section">
       <h2 className="scripted-heading">Latest Posts</h2>
       <BlogList data={latestPosts} />
+      <Button to="/blog">Read More Posts</Button>
     </section>
 
     {/* Subscribe Section */}
@@ -54,7 +55,7 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout pageTitle="Home | The Minimalist Travel Family">
       <IndexPageTemplate
         aboutContent={{
           aboutBody: frontmatter.aboutBody,

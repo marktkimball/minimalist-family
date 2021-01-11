@@ -6,13 +6,13 @@ import "./all.scss";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, pageTitle }) => {
   const { title, description } = useSiteMetadata();
   return (
     <div style={{ overflowX: "hidden" }}>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
+        <title>{pageTitle || title}</title>
         <meta name="description" content={description} />
 
         <link
@@ -47,6 +47,17 @@ const TemplateWrapper = ({ children }) => {
           property="og:image"
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-4B643GDWB9"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-4B643GDWB9');`}
+        </script>
       </Helmet>
       <Navbar />
       <div className="main-layout">{children}</div>

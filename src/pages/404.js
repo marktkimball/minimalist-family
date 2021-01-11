@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import Layout from '../components/Layout';
-import './error-page.scss';
+import React from "react";
+import { Link } from "gatsby";
+import Layout from "../components/Layout";
+import "./error-page.scss";
 
 const NotFoundPage = () => (
-  <Layout>
+  <Layout pageTitle="Not Found | The Minimalist Travel Family">
     <section className="section section--gradient">
       <h1 className="headline-text error-heading">Page Not Found</h1>
       <p className="error-body">

@@ -39,7 +39,7 @@ const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout>
+    <Layout pageTitle="About | The Minimalist Travel Family">
       <AboutPageTemplate
         content={post.html}
         contentComponent={HTMLContent}

@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-leftImage: /img/img_3564.jpg
+leftImage: /img/img_3816.jpg
 rightImage: /img/img_20200303_171335.jpg
 subtitle: Traveling light across the world
 welcomeHeading: Welcome!

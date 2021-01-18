@@ -11,41 +11,23 @@ tags:
   - Minimize
 featuredImage: /img/de248cc7-569f-4dd7-bac4-616391c4d4c0.jpg
 ---
-
-
 In this post, I will be sharing with you my Top Tips of how help your kids minimize and easily go through their stuff. It is hard, it is difficult, but it CAN BE DONE!!
-
-
 
 When I asked 4 year old Emmy the other day if she wanted to help me organize some of her toys and treasures, she happily agreed, which is against her nature to want to purge anything!! 6 year old McKenna however, has happily been tossing her toys away with a quick “thank you” ever since she was 3. But Emmy? She is a born pack rat! She is the one who takes the toys out of the trash and saves everything!! From scrap pieces of a magazine to plastic baggies, Emmy deems everything worthy of saving as one of her treasures. So organizing and minimizing with her can usually mean a big ordeal, close to tears and nothing really getting “minimized” by the end.
 
 However.
 
-
-
 Since we have made the family decision to sell everything we own in order to full-time travel, the children have surprisingly, happily and quickly adapted to the idea that they won’t be able to bring everything with them in their backpack. Over the years, we have purged, splurged and purged again and again, only to always have more than we need or use. So this time, with the coming up launch from Arizona, we have to be more careful with our purchases. This time, when we minimize our toys, there isn’t anything coming in to replace them.
 
-
-
-While minimizing with Emmy for our newest Youtube video, “Minimalism with a 4 year old”, I was so proud of Emmy’s attitude! She gleefully and carefully evaluated what toys brought her joy and quickly tossed away the excess. We made the rule that each girl can bring 1 doll, 1 stuffed animal and their blanket. But all the little tiny toys were hard to deal with, until I came up with a solution. Along with their [backpack](https://amzn.to/2LZXkE5) present for Christmas, I gave each girl a [clear, plastic zippered pouch](https://amzn.to/3qrB31c) to keep whatever tiny treasures they wanted. Each girl happily chose tiny Frozen figurines, shiny rocks, and whatever else they have stuffed in there.
-
-
+While minimizing with Emmy for our newest Youtube video, “[Minimalism with a 4 year old](https://youtu.be/MiPoxT_GhJU)”, I was so proud of Emmy’s attitude! She gleefully and carefully evaluated what toys brought her joy and quickly tossed away the excess. We made the rule that each girl can bring 1 doll, 1 stuffed animal and their blanket. But all the little tiny toys were hard to deal with, until I came up with a solution. Along with their [backpack](https://amzn.to/2LZXkE5) present for Christmas, I gave each girl a [clear, plastic zippered pouch](https://amzn.to/3qrB31c) to keep whatever tiny treasures they wanted. Each girl happily chose tiny Frozen figurines, shiny rocks, and whatever else they have stuffed in there.
 
 While I haven’t purposely used any written rules with organizing with the children, I do seem to stick to a few methods that have worked really well for us!
 
-
-
 SO LET’S DIVE IN!!
-
-
 
 ## Tips for Minimizing with Children
 
-
-
 1. **Establish a Clear Goal.** Why are you wanting to organize? Is this for your sake or theirs? Do you need the space? Are you moving across the country? Is it to save money on storage in a moving truck? Is your home chaotic? Are they having a hard time keeping their room clean? Did another Christmas just happen so newer toys are more intriguing? Did you just watch the Marie Kondo show and get inspired?
-
-
 
 Questions such as these are great to ask yourself as you are just starting out with the cleaning process. Before you throw anything away, it is necessary for you as the parent, to first have a CLEAR GOAL why you are minimizing in the first place.
 

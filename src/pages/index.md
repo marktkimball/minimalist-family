@@ -14,5 +14,5 @@ aboutBody: Have you ever wanted to just sell everything and start over?  That’
   exactly what I did with my family of 6!  On this blog, I share all my tips,
   tricks and adventures that come with being a minimalist family who gets to
   travel full time!!
-aboutImage: /img/sunset_crater.jpg
+aboutImage: /img/img_7345.jpg
 ---

@@ -3,7 +3,7 @@ templateKey: blog-post
 type: post
 title: Vegan Nut-Free Granola
 author: Mrs. Minimalist
-date: 2021-01-31T03:43:16.356Z
+date: 2021-01-31T19:00:46.686Z
 tags:
   - Recipe
   - Granola

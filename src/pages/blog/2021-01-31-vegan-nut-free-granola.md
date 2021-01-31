@@ -26,4 +26,6 @@ To watch Percy and I make this recipe, head over to our Youtube channel and chec
 
 <a href="https://www.youtube.com/channel/UCjUGz1Y3oBH8X_67NfOzhDQ">https://www.youtube.com/channel/UCjUGz1Y3oBH8X_67NfOzhDQ</a>
 
-<a download href="/img/Granola Recipe.pdf">Download PDF</a>
+![granola recipe preview](/img/granola-recipe-preview.jpg "Granola Recipe")
+
+<a download href="/img/Granola Recipe.pdf">Download Granola Recipe Here</a>

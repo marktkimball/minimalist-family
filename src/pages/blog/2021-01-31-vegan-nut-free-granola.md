@@ -36,11 +36,7 @@ To watch a step-by-step video of me making this recipe, head over to our Youtube
 
 <a download href="/img/Granola Recipe.pdf">Download Granola Recipe Here</a>
 
-
-
 For a **GLUTEN-FREE** option, just use GF Oats and omit the cheerios.  
-
-
 
 Items I use to make this granola recipe: 
 
@@ -52,12 +48,8 @@ Items I use to make this granola recipe:
 
 [Spatulas](https://amzn.to/2MlhMjt) (I use these every day!!)
 
-
-
-
-
-
-
 \*\*Disclosure: I only recommend products I would use myself and all opinions expressed here are our own. This post may contain affiliate links that at no additional cost to you, I may earn a small commission.\*\*
 
 *I hope you get a chance to try this recipe!  It is very easy, very quick, and very delicious.*
+
+![](/img/d1b48af4-c8cd-4078-ba45-c396db184fd7.jpg "Vegan Nut-Free Granola")

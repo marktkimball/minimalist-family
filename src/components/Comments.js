@@ -27,26 +27,33 @@ const Comments = ({ postId }) => {
         {`${commentsCount} Comment${commentsCount === 1 ? "" : "s"}`}
       </h2>
       <div>
-        {map(comments, ({ date, name, website, message }, i) => (
-          <div className="comment-container" key={i}>
-            <div className="comment-title-container">
-              <div className="comment-avatar">MK</div>
-              <div className="comment-meta-data">
-                {website ? (
-                  <a className="comment-name" href={website}>
-                    {name}
-                  </a>
-                ) : (
-                  <div className="comment-name">{name}</div>
-                )}
-                <div className="comment-date">
-                  on {new Date(date).toLocaleDateString()}
+        {map(comments, ({ date, name, website, message }, i) => {
+          const initials = name
+            .split(" ")
+            .map((n, i, a) => (i === 0 || i + 1 === a.length ? n[0] : null))
+            .join("");
+
+          return (
+            <div className="comment-container" key={i}>
+              <div className="comment-title-container">
+                <div className="comment-avatar">{initials}</div>
+                <div className="comment-meta-data">
+                  {website ? (
+                    <a className="comment-name" href={website}>
+                      {name}
+                    </a>
+                  ) : (
+                    <div className="comment-name">{name}</div>
+                  )}
+                  <div className="comment-date">
+                    on {new Date(date).toLocaleDateString()}
+                  </div>
                 </div>
               </div>
+              <div className="comment-message">{message}</div>
             </div>
-            <div className="comment-message">{message}</div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

@@ -31,7 +31,8 @@ const Comments = ({ postId }) => {
           const initials = name
             .split(" ")
             .map((n, i, a) => (i === 0 || i + 1 === a.length ? n[0] : null))
-            .join("");
+            .join("")
+            .toUpperCase();
 
           return (
             <div className="comment-container" key={i}>

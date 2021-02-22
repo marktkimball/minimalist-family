@@ -65,11 +65,16 @@
 }
 
 .comment-avatar {
+  align-items: center;
   background-color: $brand-logo-primary;
   border-radius: 50%;
+  display: flex;
   font-size: 2rem;
+  height: 60px;
+  justify-content: center;
   margin-right: 1.8rem;
   padding: 0.8rem;
+  width: 60px;
 }
 
 @media screen and (max-width: 767px) {
